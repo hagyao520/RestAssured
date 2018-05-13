@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="GiveU.Sales.WebApi.Test" parallel="false" configfailurepolicy ="continue">
+    <!---->
+    <test name="销售服务系统-登录接口测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCase.LoginTest"/>
+        </classes>
+    </test>
+    <!--—————————————————————————————————————————————————-->
+    
+    <!-- 调用的监听 -->    
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        <!--"org.testng.internal org.testng.TestRunner org.testng.SuiteRunner org.testng.remote.RemoteTestNG org.testng.TestNG sun.reflect java.lang"--> 
+        <!--"org.testng.reporters.EmailableReporter2,org.testng.reporters.jq.Main,org.testng.reporters.SuiteHTMLReporter,org.testng.reporters.XMLReporter,org.testng.reporters.JUnitReportReporter"--> 
+    </listeners>      
+</suite>

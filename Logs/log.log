@@ -1,0 +1,9 @@
+2018-05-13 15:30:52.362 [INFO ] com.sales.webapi.handler.LoginApi_Handler - class com.sales.webapi.handler.LoginApi_Handler
+2018-05-13 15:30:54.816 [INFO ] com.sales.webapi.handler.LoginApi_Handler - 根据数据库查询结果, 开始写入预期值【Waiting...】
+2018-05-13 15:30:55.515 [INFO ] com.sales.webapi.util.DataBase_Util - 数据库资源释放成功！
+2018-05-13 15:30:55.515 [INFO ] com.sales.webapi.util.DataBase_Util - 数据库连接关闭成功！
+2018-05-13 15:30:58.484 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://10.10.11.132:8030
+2018-05-13 15:30:58.490 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 10.10.11.132:8030
+2018-05-13 15:31:19.487 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@15e93f04 closed
+2018-05-13 15:31:19.487 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@15e93f04 shut down
+2018-05-13 15:31:19.488 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@10eba3b7

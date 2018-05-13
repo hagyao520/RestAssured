@@ -1,0 +1,2919 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/9fa70d0ed9c34a8ed445ceee3494d3d7de7f8918/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>销售服务系统接口测试测试报告</title>
+
+	<style type='text/css'>
+		.node.level-1  ul{ display:none;} .node.level-1.active ul{display:block;}
+	</style>
+</head>
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1)" view='testrunner-logs-view'><i class='material-icons'>note</i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>GiveU.Sales.WebApi.Test</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+				<span class='label suite-start-time'>Jan 23, 2018 3:04:13 PM</span>
+			</a>
+			<a href='#!'>
+				<span class='label'>v3.0.3</span>
+			</a>
+		</ul>
+	</div>
+</nav>
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>GiveU.Sales.WebApi.Test</a></li>
+					<li><a href='#'>销售服务系统-登录接口测试场景点</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span><span class='strong'>12</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong'>9</span> test(s) failed, <span class='strong'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span><span class='strong'>12</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong'>9</span> step(s) failed, <span class='strong'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h3>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf fail' status='fail' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>销售服务系统-登录接口测试场景点</span>
+						<span class='test-time'>Jan 23, 2018 3:04:13 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jan 23, 2018 3:04:13 PM</span>
+	<span class='label end-time'>Jan 23, 2018 3:06:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 22s+467ms</span>
+</div>
+	<div class='test-desc'>Pass: 12 ; Fail: 9 ; Skip: 0 ; </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+				<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+			</div>
+	</div>
+	<ul class='collapsible node-list' data-collapsible='accordion'>
+		
+				<li class='node level-1 leaf fail' status='fail' test-id='2'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_13</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:14 PM</span>
+						<span class='node-duration'>0h 1m 20s+996ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 13</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果$id值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: $id =>Expected 【21】 but found 【2】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:775)
+	at TestCase.LoginTest.Case_13(LoginTest.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='3'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_14</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:21 PM</span>
+						<span class='node-duration'>0h 1m 14s+345ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 14</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果phone值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: phone =>Expected 【13111111112】 but found 【13111111111】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:776)
+	at TestCase.LoginTest.Case_14(LoginTest.java:99)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='4'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_15</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:27 PM</span>
+						<span class='node-duration'>0h 1m 8s+128ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 15</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果roleId值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: roleId =>Expected 【SA1】 but found 【SA】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:777)
+	at TestCase.LoginTest.Case_15(LoginTest.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='5'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_16</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:34 PM</span>
+						<span class='node-duration'>0h 1m 1s+918ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 16</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果roleName值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: roleName =>Expected 【销售代表1】 but found 【销售代表】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:778)
+	at TestCase.LoginTest.Case_16(LoginTest.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='6'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_17</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:40 PM</span>
+						<span class='node-duration'>0h 0m 55s+772ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 17</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果salesId值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: salesId =>Expected 【666667】 but found 【666666】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:779)
+	at TestCase.LoginTest.Case_17(LoginTest.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='7'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_18</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:46 PM</span>
+						<span class='node-duration'>0h 0m 49s+562ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 18</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果userName值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: userName =>Expected 【King1】 but found 【King】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:780)
+	at TestCase.LoginTest.Case_18(LoginTest.java:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='8'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_19</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:52 PM</span>
+						<span class='node-duration'>0h 0m 43s+270ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 19</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果identification值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【King】, Actual: 【King】</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: identification =>Expected 【string1】 but found 【string】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:781)
+	at TestCase.LoginTest.Case_19(LoginTest.java:129)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='9'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_20</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:58 PM</span>
+						<span class='node-duration'>0h 0m 36s+976ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 20</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果photoName值错误, 其它都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【King】, Actual: 【King】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【string】, Actual: 【string】</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: photoName =>Expected 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg1】 but found 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:782)
+	at TestCase.LoginTest.Case_20(LoginTest.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf fail' status='fail' test-id='10'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_21</div>						
+						<span class='node-time'>Jan 23, 2018 3:06:05 PM</span>
+						<span class='node-duration'>0h 0m 30s+325ms</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 21</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，所有预期结果都错误</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='fail'>
+													<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'><textarea>java.lang.AssertionError: $id =>Expected 【21】 but found 【2】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:775)
+	at TestCase.LoginTest.Case_21(LoginTest.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='11'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case1</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:19 PM</span>
+						<span class='node-duration'>0h 2m 15s+968ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 1</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用空值的账号,密码,类型,版本,手机标识,将无法登录，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: , password: , type: , version: , identification:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"密码必须输入","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='12'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case2</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:26 PM</span>
+						<span class='node-duration'>0h 2m 9s+172ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 2</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用空值的账号,正确的密码,类型,版本,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: , password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"销售Id必须输入","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='13'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case3</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:31 PM</span>
+						<span class='node-duration'>0h 2m 4s+718ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 3</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用空值的密码,正确的账号,类型,版本,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: , type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"密码必须输入","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='14'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case4</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:35 PM</span>
+						<span class='node-duration'>0h 2m 0s+378ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 4</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用空值的类型,正确的账号,密码,版本,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: , version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"类型必须输入","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='15'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case5</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:39 PM</span>
+						<span class='node-duration'>0h 1m 56s+98ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 5</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用空值的版本,正确的账号,密码,类型,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: , identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"版本号必须输入","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='16'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case6</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:44 PM</span>
+						<span class='node-duration'>0h 1m 51s+911ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 6</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用空值的手机标识,正确的账号,密码,类型,版本,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification:</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"手机标识必须输入","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='17'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case7</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:48 PM</span>
+						<span class='node-duration'>0h 1m 47s+765ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 7</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用错误的账号,正确的密码,类型,版本,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666667, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"账号或密码不正确","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='18'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case8</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:52 PM</span>
+						<span class='node-duration'>0h 1m 43s+577ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 8</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用错误的密码,正确的账号,类型,版本,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612427, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"账号或密码不正确","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='19'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case9</div>						
+						<span class='node-time'>Jan 23, 2018 3:04:56 PM</span>
+						<span class='node-duration'>0h 1m 39s+369ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 9</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用错误的类型,正确的账号,密码,版本,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: "string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='20'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_10</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:00 PM</span>
+						<span class='node-duration'>0h 1m 35s+227ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 10</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用错误的版本,正确的账号,密码,类型,手机标识,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: "string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='21'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_11</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:04 PM</span>
+						<span class='node-duration'>0h 1m 31s+81ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 11</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用错误的手机标识,正确的账号,密码,类型,版本,将登录失败，且可以正常返回提示信息</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: "string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":"","status":false,"data":"","code":"1002"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+				<li class='node level-1 leaf pass' status='pass' test-id='22'>
+					<div class='collapsible-header'>
+						<div class='node-name'>Case_12</div>						
+						<span class='node-time'>Jan 23, 2018 3:05:09 PM</span>
+						<span class='node-duration'>0h 1m 26s+935ms</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+						<div class='collapsible-body'>
+									<div class='category-list right'>
+											<span class='category label white-text'>GiveU.Sales.WebApi.Test</span>
+											<span class='category label white-text'>销售服务系统-登录接口测试场景点</span>
+									</div>
+								<div class='node-steps'>
+									<table class='bordered table-results'>
+										<thead>
+											<tr>
+												<th>Status</th>
+												<th>Timestamp</th>
+												<th>Details</th>
+											</tr>
+										</thead>
+										<tbody>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例ID: 12</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，且预期结果和Json结果信息都正确</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求地址: http://10.10.11.132:8030/api/Account/Login</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖userName〗=>Expected: 【King】, Actual: 【King】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖identification〗=>Expected: 【string】, Actual: 【string】</td>
+												</tr>
+												<tr class='log' status='debug'>
+													<td class='status debug' title='debug' alt='debug'><i class='material-icons'>low_priority</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>用例结果: 〖photoName〗=>Expected: 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】, Actual: 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】</td>
+												</tr>
+												<tr class='log' status='pass'>
+													<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+													<td class='timestamp'>3:06:35 PM</td>
+													<td class='step-details'>Test passed</td>
+												</tr>
+										</tbody>
+									</table>
+								</div>
+						</div>
+				</li>
+	</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view --><div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>GiveU.Sales.WebApi.Test</span>
+						<span class='category-status right'>
+							<span class='label pass'>12</span>
+							<span class='label fail'>10</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 12</span>
+							<span class='label red lighten-1 white-text'>Failed: 10</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 23, 2018 3:04:13 PM</td>
+										<td class='linked' test-id='1'>GiveU.Sales.WebApi.Test</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:14 PM</td>
+										<td class='linked' test-id='2'>GiveU.Sales.WebApi.Test.Case_13</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:21 PM</td>
+										<td class='linked' test-id='3'>GiveU.Sales.WebApi.Test.Case_14</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:27 PM</td>
+										<td class='linked' test-id='4'>GiveU.Sales.WebApi.Test.Case_15</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:34 PM</td>
+										<td class='linked' test-id='5'>GiveU.Sales.WebApi.Test.Case_16</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:40 PM</td>
+										<td class='linked' test-id='6'>GiveU.Sales.WebApi.Test.Case_17</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:46 PM</td>
+										<td class='linked' test-id='7'>GiveU.Sales.WebApi.Test.Case_18</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:52 PM</td>
+										<td class='linked' test-id='8'>GiveU.Sales.WebApi.Test.Case_19</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:58 PM</td>
+										<td class='linked' test-id='9'>GiveU.Sales.WebApi.Test.Case_20</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:06:05 PM</td>
+										<td class='linked' test-id='10'>GiveU.Sales.WebApi.Test.Case_21</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:19 PM</td>
+										<td class='linked' test-id='11'>GiveU.Sales.WebApi.Test.Case1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:26 PM</td>
+										<td class='linked' test-id='12'>GiveU.Sales.WebApi.Test.Case2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:31 PM</td>
+										<td class='linked' test-id='13'>GiveU.Sales.WebApi.Test.Case3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:35 PM</td>
+										<td class='linked' test-id='14'>GiveU.Sales.WebApi.Test.Case4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:39 PM</td>
+										<td class='linked' test-id='15'>GiveU.Sales.WebApi.Test.Case5</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:44 PM</td>
+										<td class='linked' test-id='16'>GiveU.Sales.WebApi.Test.Case6</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:48 PM</td>
+										<td class='linked' test-id='17'>GiveU.Sales.WebApi.Test.Case7</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:52 PM</td>
+										<td class='linked' test-id='18'>GiveU.Sales.WebApi.Test.Case8</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:56 PM</td>
+										<td class='linked' test-id='19'>GiveU.Sales.WebApi.Test.Case9</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:00 PM</td>
+										<td class='linked' test-id='20'>GiveU.Sales.WebApi.Test.Case_10</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:04 PM</td>
+										<td class='linked' test-id='21'>GiveU.Sales.WebApi.Test.Case_11</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:09 PM</td>
+										<td class='linked' test-id='22'>GiveU.Sales.WebApi.Test.Case_12</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>销售服务系统-登录接口测试场景点</span>
+						<span class='category-status right'>
+							<span class='label pass'>12</span>
+							<span class='label fail'>10</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 12</span>
+							<span class='label red lighten-1 white-text'>Failed: 10</span>
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 23, 2018 3:04:13 PM</td>
+										<td class='linked' test-id='1'>GiveU.Sales.WebApi.Test</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:14 PM</td>
+										<td class='linked' test-id='2'>GiveU.Sales.WebApi.Test.Case_13</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:21 PM</td>
+										<td class='linked' test-id='3'>GiveU.Sales.WebApi.Test.Case_14</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:27 PM</td>
+										<td class='linked' test-id='4'>GiveU.Sales.WebApi.Test.Case_15</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:34 PM</td>
+										<td class='linked' test-id='5'>GiveU.Sales.WebApi.Test.Case_16</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:40 PM</td>
+										<td class='linked' test-id='6'>GiveU.Sales.WebApi.Test.Case_17</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:46 PM</td>
+										<td class='linked' test-id='7'>GiveU.Sales.WebApi.Test.Case_18</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:52 PM</td>
+										<td class='linked' test-id='8'>GiveU.Sales.WebApi.Test.Case_19</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:58 PM</td>
+										<td class='linked' test-id='9'>GiveU.Sales.WebApi.Test.Case_20</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:06:05 PM</td>
+										<td class='linked' test-id='10'>GiveU.Sales.WebApi.Test.Case_21</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:19 PM</td>
+										<td class='linked' test-id='11'>GiveU.Sales.WebApi.Test.Case1</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:26 PM</td>
+										<td class='linked' test-id='12'>GiveU.Sales.WebApi.Test.Case2</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:31 PM</td>
+										<td class='linked' test-id='13'>GiveU.Sales.WebApi.Test.Case3</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:35 PM</td>
+										<td class='linked' test-id='14'>GiveU.Sales.WebApi.Test.Case4</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:39 PM</td>
+										<td class='linked' test-id='15'>GiveU.Sales.WebApi.Test.Case5</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:44 PM</td>
+										<td class='linked' test-id='16'>GiveU.Sales.WebApi.Test.Case6</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:48 PM</td>
+										<td class='linked' test-id='17'>GiveU.Sales.WebApi.Test.Case7</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:52 PM</td>
+										<td class='linked' test-id='18'>GiveU.Sales.WebApi.Test.Case8</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:04:56 PM</td>
+										<td class='linked' test-id='19'>GiveU.Sales.WebApi.Test.Case9</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:00 PM</td>
+										<td class='linked' test-id='20'>GiveU.Sales.WebApi.Test.Case_10</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:04 PM</td>
+										<td class='linked' test-id='21'>GiveU.Sales.WebApi.Test.Case_11</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Jan 23, 2018 3:05:09 PM</td>
+										<td class='linked' test-id='22'>GiveU.Sales.WebApi.Test.Case_12</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view --><div id='exception-view' class='view hide'>
+	
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Exceptions</h3>
+			<ul id='exception-collection' class='exception-collection'>
+				
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>	
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 23, 2018 3:06:05 PM</td>
+										<td class='linked' test-id='10'>GiveU.Sales.WebApi.Test.Case_21</td>
+										<td><pre><textarea>java.lang.AssertionError: $id =>Expected 【21】 but found 【2】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)
+	at com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:775)
+	at TestCase.LoginTest.Case_21(LoginTest.java:141)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</textarea></pre></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>21</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jan 23, 2018 3:04:13 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jan 23, 2018 3:06:35 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>142,748ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+						</tr>
+						<tr>
+							<td>GiveU.Sales.WebApi.Test</td>
+							<td>12</td>
+							<td>10</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>销售服务系统-登录接口测试场景点</td>
+							<td>12</td>
+							<td>10</td>
+							<td>0</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view --><div id='testrunner-logs-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>TestRunner Logs</h5>
+		
+		<div class='card-panel'>
+				用例ID: 1
+				用例名称:使用空值的账号,密码,类型,版本,手机标识,将无法登录，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: , password: , type: , version: , identification: 
+				返回结果: {"$id":"1","message":"密码必须输入","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 2
+				用例名称:使用空值的账号,正确的密码,类型,版本,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: , password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":"销售Id必须输入","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 3
+				用例名称:使用空值的密码,正确的账号,类型,版本,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: , type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":"密码必须输入","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 4
+				用例名称:使用空值的类型,正确的账号,密码,版本,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: , version: string, identification: string
+				返回结果: {"$id":"1","message":"类型必须输入","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 5
+				用例名称:使用空值的版本,正确的账号,密码,类型,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: , identification: string
+				返回结果: {"$id":"1","message":"版本号必须输入","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 6
+				用例名称:使用空值的手机标识,正确的账号,密码,类型,版本,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: 
+				返回结果: {"$id":"1","message":"手机标识必须输入","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 7
+				用例名称:使用错误的账号,正确的密码,类型,版本,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666667, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":"账号或密码不正确","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 8
+				用例名称:使用错误的密码,正确的账号,类型,版本,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612427, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":"账号或密码不正确","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 9
+				用例名称:使用错误的类型,正确的账号,密码,版本,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: "string, version: string, identification: string
+				返回结果: {"$id":"1","message":"","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 10
+				用例名称:使用错误的版本,正确的账号,密码,类型,手机标识,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: "string, identification: string
+				返回结果: {"$id":"1","message":"","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 11
+				用例名称:使用错误的手机标识,正确的账号,密码,类型,版本,将登录失败，且可以正常返回提示信息
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: "string
+				返回结果: {"$id":"1","message":"","status":false,"data":"","code":"1002"}
+				用例结果: 〖$id〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖phone〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖roleName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖salesId〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖userName〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖identification〗=>Expected: 【】, Actual: 【】
+				用例结果: 〖photoName〗=>Expected: 【】, Actual: 【】
+				用例ID: 12
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，且预期结果和Json结果信息都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】
+				用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】
+				用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】
+				用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】
+				用例结果: 〖userName〗=>Expected: 【King】, Actual: 【King】
+				用例结果: 〖identification〗=>Expected: 【string】, Actual: 【string】
+				用例结果: 〖photoName〗=>Expected: 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】, Actual: 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】
+				用例ID: 13
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果$id值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例ID: 14
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果phone值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例ID: 15
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果roleId值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】
+				用例ID: 16
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果roleName值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】
+				用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】
+				用例ID: 17
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果salesId值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】
+				用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】
+				用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】
+				用例ID: 18
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果userName值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】
+				用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】
+				用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】
+				用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】
+				用例ID: 19
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果identification值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】
+				用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】
+				用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】
+				用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】
+				用例结果: 〖userName〗=>Expected: 【King】, Actual: 【King】
+				用例ID: 20
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果photoName值错误, 其它都正确
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+				用例结果: 〖$id〗=>Expected: 【2】, Actual: 【2】
+				用例结果: 〖phone〗=>Expected: 【13111111111】, Actual: 【13111111111】
+				用例结果: 〖roleId〗=>Expected: 【SA】, Actual: 【SA】
+				用例结果: 〖roleName〗=>Expected: 【销售代表】, Actual: 【销售代表】
+				用例结果: 〖salesId〗=>Expected: 【666666】, Actual: 【666666】
+				用例结果: 〖userName〗=>Expected: 【King】, Actual: 【King】
+				用例结果: 〖identification〗=>Expected: 【string】, Actual: 【string】
+				用例ID: 21
+				用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，所有预期结果都错误
+				请求地址: http://10.10.11.132:8030/api/Account/Login
+				请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string
+				返回结果: {"$id":"1","message":null,"status":true,"data":{"$id":"2","phone":"13111111111","roleId":"SA","roleName":"销售代表","salesId":666666,"userName":"King","identification":"string","photoName":"http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg"},"code":"1000"}
+		</div>
+	</div>
+</div>
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 12,
+				failParent: 9,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 9,
+				
+				passChild: 12,
+				failChild: 9,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 238,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/9fa70d0ed9c34a8ed445ceee3494d3d7de7f8918/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+	</body>
+	
+</html>

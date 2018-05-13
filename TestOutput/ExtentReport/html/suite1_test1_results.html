@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Default test</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>Default test</h1>
+<p>
+  Test duration: 134.801s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">TestCase.LoginTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Case_13
+      </td>
+  <td class="duration">
+    5.876s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 13<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果$id值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: $id =&gt;Expected 【21】 but found 【2】</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:775)<br />
+              TestCase.LoginTest.Case_13(LoginTest.java:93)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_14
+      </td>
+  <td class="duration">
+    6.162s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 14<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果phone值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: phone =&gt;Expected 【13111111112】 but found 【13111111111】</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:776)<br />
+              TestCase.LoginTest.Case_14(LoginTest.java:99)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_15
+      </td>
+  <td class="duration">
+    6.004s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 15<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果roleId值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【13111111111】, Actual: 【13111111111】<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: roleId =&gt;Expected 【SA1】 but found 【SA】</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:777)<br />
+              TestCase.LoginTest.Case_15(LoginTest.java:105)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_16
+      </td>
+  <td class="duration">
+    5.972s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 16<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果roleName值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【13111111111】, Actual: 【13111111111】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【SA】, Actual: 【SA】<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: roleName =&gt;Expected 【销售代表1】 but found 【销售代表】</b></a><br />
+    <div class="stackTrace" id="exception-3">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:778)<br />
+              TestCase.LoginTest.Case_16(LoginTest.java:111)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_17
+      </td>
+  <td class="duration">
+    6.938s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 17<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果salesId值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【13111111111】, Actual: 【13111111111】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【SA】, Actual: 【SA】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【销售代表】, Actual: 【销售代表】<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: salesId =&gt;Expected 【666667】 but found 【666666】</b></a><br />
+    <div class="stackTrace" id="exception-4">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:779)<br />
+              TestCase.LoginTest.Case_17(LoginTest.java:117)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_18
+      </td>
+  <td class="duration">
+    5.755s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 18<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果userName值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【13111111111】, Actual: 【13111111111】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【SA】, Actual: 【SA】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【销售代表】, Actual: 【销售代表】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【666666】, Actual: 【666666】<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-5', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: userName =&gt;Expected 【King1】 but found 【King】</b></a><br />
+    <div class="stackTrace" id="exception-5">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:780)<br />
+              TestCase.LoginTest.Case_18(LoginTest.java:123)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_19
+      </td>
+  <td class="duration">
+    5.770s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 19<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果identification值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【13111111111】, Actual: 【13111111111】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【SA】, Actual: 【SA】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【销售代表】, Actual: 【销售代表】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【666666】, Actual: 【666666】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【King】, Actual: 【King】<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-6', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: identification =&gt;Expected 【string1】 but found 【string】</b></a><br />
+    <div class="stackTrace" id="exception-6">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:781)<br />
+              TestCase.LoginTest.Case_19(LoginTest.java:129)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_20
+      </td>
+  <td class="duration">
+    5.778s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 20<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，预期结果photoName值错误, 其它都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【13111111111】, Actual: 【13111111111】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【SA】, Actual: 【SA】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【销售代表】, Actual: 【销售代表】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【666666】, Actual: 【666666】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【King】, Actual: 【King】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【string】, Actual: 【string】<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-7', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: photoName =&gt;Expected 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg1】 but found 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】</b></a><br />
+    <div class="stackTrace" id="exception-7">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:782)<br />
+              TestCase.LoginTest.Case_20(LoginTest.java:135)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_21
+      </td>
+  <td class="duration">
+    6.909s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 21<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，所有预期结果都错误<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-8', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: $id =&gt;Expected 【21】 but found 【2】</b></a><br />
+    <div class="stackTrace" id="exception-8">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.sales.webapi.handler.LoginApi_Handler.checkEquals(LoginApi_Handler.java:846)<br />
+              com.sales.webapi.handler.LoginApi_Handler.resultCheck(LoginApi_Handler.java:775)<br />
+              TestCase.LoginTest.Case_21(LoginTest.java:141)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br />
+              java.lang.reflect.Method.invoke(Unknown Source)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:643)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:782)<br />
+              org.testng.TestRunner.run(TestRunner.java:632)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1169)<br />
+              org.testng.TestNG.run(TestNG.java:1064)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">TestCase.LoginTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Case1
+      </td>
+  <td class="duration">
+    6.470s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 1<br />
+                                用例名称:使用空值的账号,密码,类型,版本,手机标识,将无法登录，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: , password: , type: , version: , identification: <br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;密码必须输入&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case2
+      </td>
+  <td class="duration">
+    4.167s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 2<br />
+                                用例名称:使用空值的账号,正确的密码,类型,版本,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: , password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;销售Id必须输入&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case3
+      </td>
+  <td class="duration">
+    4.092s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 3<br />
+                                用例名称:使用空值的密码,正确的账号,类型,版本,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: , type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;密码必须输入&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case4
+      </td>
+  <td class="duration">
+    4.081s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 4<br />
+                                用例名称:使用空值的类型,正确的账号,密码,版本,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: , version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;类型必须输入&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case5
+      </td>
+  <td class="duration">
+    4.224s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 5<br />
+                                用例名称:使用空值的版本,正确的账号,密码,类型,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: , identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;版本号必须输入&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case6
+      </td>
+  <td class="duration">
+    3.982s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 6<br />
+                                用例名称:使用空值的手机标识,正确的账号,密码,类型,版本,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: <br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;手机标识必须输入&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case7
+      </td>
+  <td class="duration">
+    4.059s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 7<br />
+                                用例名称:使用错误的账号,正确的密码,类型,版本,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666667, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;账号或密码不正确&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case8
+      </td>
+  <td class="duration">
+    4.011s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 8<br />
+                                用例名称:使用错误的密码,正确的账号,类型,版本,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612427, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;账号或密码不正确&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case9
+      </td>
+  <td class="duration">
+    4.051s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 9<br />
+                                用例名称:使用错误的类型,正确的账号,密码,版本,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: &quot;string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_10
+      </td>
+  <td class="duration">
+    4.041s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 10<br />
+                                用例名称:使用错误的版本,正确的账号,密码,类型,手机标识,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: &quot;string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_11
+      </td>
+  <td class="duration">
+    4.089s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 11<br />
+                                用例名称:使用错误的手机标识,正确的账号,密码,类型,版本,将登录失败，且可以正常返回提示信息<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: &quot;string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:&quot;&quot;,&quot;status&quot;:false,&quot;data&quot;:&quot;&quot;,&quot;code&quot;:&quot;1002&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【】, Actual: 【】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case_12
+      </td>
+  <td class="duration">
+    5.673s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 12<br />
+                                用例名称:使用正确的账号,密码,类型,版本,手机标识,可以正常登录成功，且预期结果和Json结果信息都正确<br />
+                                请求地址: http://10.10.11.132:8030/api/Account/Login<br />
+                                请求参数: userId: 666666, password: 612426, type: string, version: string, identification: string<br />
+                                返回结果: {&quot;$id&quot;:&quot;1&quot;,&quot;message&quot;:null,&quot;status&quot;:true,&quot;data&quot;:{&quot;$id&quot;:&quot;2&quot;,&quot;phone&quot;:&quot;13111111111&quot;,&quot;roleId&quot;:&quot;SA&quot;,&quot;roleName&quot;:&quot;销售代表&quot;,&quot;salesId&quot;:666666,&quot;userName&quot;:&quot;King&quot;,&quot;identification&quot;:&quot;string&quot;,&quot;photoName&quot;:&quot;http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg&quot;},&quot;code&quot;:&quot;1000&quot;}<br />
+                                用例结果: 〖$id〗=&gt;Expected: 【2】, Actual: 【2】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【13111111111】, Actual: 【13111111111】<br />
+                                用例结果: 〖roleId〗=&gt;Expected: 【SA】, Actual: 【SA】<br />
+                                用例结果: 〖roleName〗=&gt;Expected: 【销售代表】, Actual: 【销售代表】<br />
+                                用例结果: 〖salesId〗=&gt;Expected: 【666666】, Actual: 【666666】<br />
+                                用例结果: 〖userName〗=&gt;Expected: 【King】, Actual: 【King】<br />
+                                用例结果: 〖identification〗=&gt;Expected: 【string】, Actual: 【string】<br />
+                                用例结果: 〖photoName〗=&gt;Expected: 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】, Actual: 【http://10.10.11.136/group1/M11/55/AE/CgsLxVk2Hn6AKeL9AANFJEeS22Y23.Jpeg】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>
