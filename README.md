@@ -1,5 +1,6 @@
 # 欢迎查阅Rest Assured（API接口自动化测试框架体系）
 
+ ---
 ### Rest Assured
 ![](https://testerhome.com/uploads/photo/2018/687752c9-83c2-4454-88f6-db4262e55822.png!large)
 
@@ -8,6 +9,7 @@
     Rest-Assured 是一套由 Java 实现的 REST API 测试框架，它是一个轻量级的 REST API 客户端，可以直接编写代码向服务器端发起 HTTP 请求，并验证返回结果；它的语法非常简洁，是一种专为测试 REST API 而设计的 DSL
     使用 Rest-Assured 测试 REST API，就和真正的用户使用 REST API 一样，只不过 Rest-Assured 让这一切变得自动化了
 
+ ---
 ### 框架介绍：
     Java + Rest Assured + Maven + TestNG + JDBC + Excel+ Git + +Ant + Jenkins** 
         •  使用Java作为项目编程语言
@@ -20,6 +22,7 @@
         •  使用Ant作为Java的build打包工具，方便项目代码打包
         •  使用Jenkins作为自动化持续集成平台，方便自动编译，自动打包，自动运行测试脚本，邮件发送测试报告
 
+ ---
 ### 主要功能：
     1. 实现了基于Rest Assured，HttpClient等常用接口请求方法的二次封装，包括(SendPost，SendGet，GetJsonResult)等，使用起来更简便
     2. 实现的基于Oracle，MySql等常用数据库SQL操作，包含（Insert into，Delete，Update，Query）和执行"存储过程"操作等
@@ -28,6 +31,7 @@
     5. 实现了基于Excel文档数据断言功能，预期结果和实际结果比对效验，检查点失败自动写入结果，可在测试报告中查看，一个检查点失败不影响后续用例执行
     6. 实现了基于ExtentReports，TestNG生成的测试报告二次美化功能，界面更美观，内容清晰
 
+ ---
 ### 环境配置：
    1. [JDK1.7以上](http://www.Oracle.com/technetwork/Java/javase/downloads/index.html)
    2. [Eclipse](http://www.eclipse.org/downloads)/[IDEA](https://www.jetbrains.com/idea/)
@@ -39,9 +43,11 @@
 
  - 部分网站需要翻墙，具体安装参考：https://www.ibm.com/developerworks/cn/java/j-lo-rest-assured
   
+ ---
 ### 注意事项：
  - 工程项目编码需要设置成UTF-8，否则会出现中文乱码情况
 
+ ---
 ### 一、创建测试对象处理程序类，例如【LoginHandler.java】
     package com.sales.webapi.handler;
 
@@ -484,7 +490,7 @@
       }
     }
 
-
+ ---
 ### 二、创建测试对象脚本用例类，例如【LoginTest.java】
     package TestCase;
 
@@ -535,6 +541,7 @@
  - 具体脚本编方法请参考: https://pan.baidu.com/s/1fBMX2ET7oHzZW-hsvCwk-A
  - 官方使用指南请参考: https://testerhome.com/topics/7060
 
+ --- 
 ### 三、Rest Assured测试用例文档配置：
     public static void GetExcelInstance() {
         logger.info(LoginHandler.class);
@@ -545,10 +552,12 @@
 
  - 测试执行时需要在指定对应Excel测试用例文档路径和Sheet工作表名，当前为GiveU.Sales.WebApi.xlsx，和Login工作表
 
+ ---
 ### 四、执行用例：
  - 编写完对应测试对象处理程序类【LoginHandler.java】，和测试对象脚本用例类【LoginTest.java】后，在Eclipse项目下选择LoginTest.java右键使用TestNG运行即可
 ![](https://testerhome.com/uploads/photo/2018/d1e4ae98-55b3-482a-914e-211cc27f16ca.png!large)
 
+ ---
 ### 五、测试报告：
  - 测试报告分为两种，一种是TestNG自带的TestngReport测试报告，另外一种则是调用ExtentReports生成的报告，第二种更加美观
 
@@ -575,6 +584,7 @@
 
 ![](https://testerhome.com/uploads/photo/2018/8da0567e-881e-4e01-af90-3928b1456d8e.png!large)
 
+ ---
 #### [ExtentReports](https://testerhome.com/uploads/photo/2018/128a4480-580f-43ae-af52-5087ae0102e6.png!large)
     <?xml version="1.0" encoding="UTF-8"?>
     <suite name="Suite" verbose="1" preserve-order="true" parallel="false">
@@ -591,8 +601,16 @@
 ![](https://testerhome.com/uploads/photo/2018/128a4480-580f-43ae-af52-5087ae0102e6.png!large)
  - 第二种测种试报告，需要翻墙才能正常显示，否则页面显示乱码，因为是国外的东西
  - 或者在C:\Windows\System32\drivers\etc    host文件末尾添加151.139.237.11   cdn.rawgit.com
- - 
-### 六、感谢
+
+ ---
+### 六、Jnekins持续集成：
+![](https://testerhome.com/uploads/photo/2018/6c209373-80f5-47f3-a9d7-e7dbfe3ea523.png!large)
+![](https://testerhome.com/uploads/photo/2018/e24ab598-67da-471d-a924-cc5360c92ec7.png!large)
+ - 搭建Jenkins环境，具体请参考: https://blog.csdn.net/wuxuehong0306/article/details/50016547
+ - 配置Jenkins自动化持续集成项目，即可实现远程服务器自动（构建，编译，打包）运行脚本，发送邮件测试报告等
+ 
+ ---
+### 七、感谢
 #### 如果您觉得这个框架不错，您可以捐赠下我，让我有理由继续下去。
 ![](https://testerhome.com/uploads/photo/2018/26d494a6-7b4f-4b69-8db1-0a3b45f886b7.png!large)
 
