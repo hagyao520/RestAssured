@@ -1,0 +1,9 @@
+select id from dafy_sales.sys_user_list where id=666666
+select * from dafy_sales.sys_user_list where id=666666
+select UUID from dafy_sales.sys_user_list where id=666666
+select * from dafy_sales.sys_role_list
+
+select su.phone as phone,su.role_id as roleId,sr.role_desc as roleName,su.id as salesId,su.user_name as userName,su.photo_name as photoName
+from dafy_sales.sys_user_list su 
+inner join  dafy_sales.sys_role_list sr on sr.role_id=su.role_id
+WHERE su.id=666666 and su.ROLE_ID = sr.ROLE_ID; 

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - 用户登录接口</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="reportng.js"></script>
+</head>
+<body>
+<h1>用户登录接口</h1>
+<p>
+  Test duration: 26.991s
+</p>
+
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">TestCases.Login</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Case2
+      </td>
+  <td class="duration">
+    1.406s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 2<br />
+                                用例名称: 使用空值的账号，空值的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                                请求地址: http://120.79.232.23:8000/api/user/login<br />
+                                请求方式: POST<br />
+                                请求参数: username=&amp;password=<br />
+                                返回结果: {&quot;username&quot;:[&quot;该字段不能为空。&quot;],&quot;password&quot;:[&quot;该字段不能为空。&quot;],&quot;code&quot;:400}<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: msg =&gt;Expected 【账号和密码不能为空】 but found 【null】</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.jmoney.luckeylink.handler.Login_Handler.checkEquals(Login_Handler.java:312)<br />
+              com.jmoney.luckeylink.handler.Login_Handler.Login(Login_Handler.java:288)<br />
+              TestCases.Login.Case2(Login.java:23)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)<br />
+              org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)<br />
+              java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+              java.lang.Thread.run(Thread.java:745)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case3
+      </td>
+  <td class="duration">
+    1.288s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 3<br />
+                                用例名称: 使用空值的账号，正确的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                                请求地址: http://120.79.232.23:8000/api/user/login<br />
+                                请求方式: POST<br />
+                                请求参数: username=&amp;password=admin369874125<br />
+                                返回结果: {&quot;username&quot;:[&quot;该字段不能为空。&quot;],&quot;code&quot;:400}<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: msg =&gt;Expected 【账号不能为空】 but found 【null】</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.jmoney.luckeylink.handler.Login_Handler.checkEquals(Login_Handler.java:312)<br />
+              com.jmoney.luckeylink.handler.Login_Handler.Login(Login_Handler.java:288)<br />
+              TestCases.Login.Case3(Login.java:28)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)<br />
+              org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)<br />
+              java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+              java.lang.Thread.run(Thread.java:745)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case4
+      </td>
+  <td class="duration">
+    1.283s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 4<br />
+                                用例名称: 使用正确的账号，空值的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                                请求地址: http://120.79.232.23:8000/api/user/login<br />
+                                请求方式: POST<br />
+                                请求参数: username=admin&amp;password=<br />
+                                返回结果: {&quot;password&quot;:[&quot;该字段不能为空。&quot;],&quot;code&quot;:400}<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.AssertionError: msg =&gt;Expected 【密码不能为空】 but found 【null】</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              org.testng.Assert.fail(Assert.java:94)<br />
+              com.jmoney.luckeylink.handler.Login_Handler.checkEquals(Login_Handler.java:312)<br />
+              com.jmoney.luckeylink.handler.Login_Handler.Login(Login_Handler.java:288)<br />
+              TestCases.Login.Case4(Login.java:33)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)<br />
+              org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)<br />
+              org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)<br />
+              java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+              java.lang.Thread.run(Thread.java:745)<br />
+                </div>
+      </td>
+</tr>
+      </table>
+
+
+  <table class="resultsTable">
+    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+          <tr>
+        <td colspan="3" class="group">TestCases.Login</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  Case1
+      </td>
+  <td class="duration">
+    4.077s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 1<br />
+                                用例名称: 使用正确的账号，正确的密码，可以正常登录成功，且接口返回的预期结果都正确<br />
+                                请求地址: http://120.79.232.23:8000/api/user/login<br />
+                                请求方式: POST<br />
+                                请求参数: username=admin&amp;password=admin369874125<br />
+                                返回结果: {&quot;code&quot;:&quot;999999&quot;,&quot;msg&quot;:&quot;成功&quot;,&quot;data&quot;:{&quot;first_name&quot;:&quot;admin&quot;,&quot;last_name&quot;:&quot;&quot;,&quot;phone&quot;:&quot;12345678911&quot;,&quot;email&quot;:&quot;admin@163.com&quot;,&quot;key&quot;:&quot;640ca3dbb875b6cfe898bf0c9b0f45a921ef169b&quot;,&quot;date_joined&quot;:&quot;2018-06-28 02:56:00&quot;,&quot;userphoto&quot;:&quot;/file/userphoto.jpg&quot;}}<br />
+                                用例结果: 〖first_name〗=&gt;Expected: 【admin】, Actual: 【admin】<br />
+                                用例结果: 〖last_name〗=&gt;Expected: 【】, Actual: 【】<br />
+                                用例结果: 〖phone〗=&gt;Expected: 【12345678911】, Actual: 【12345678911】<br />
+                                用例结果: 〖email〗=&gt;Expected: 【admin@163.com】, Actual: 【admin@163.com】<br />
+                                用例结果: 〖key〗=&gt;Expected: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】, Actual: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】<br />
+                                用例结果: 〖date_joined〗=&gt;Expected: 【2018-06-28 02:56:00】, Actual: 【2018-06-28 02:56:00】<br />
+                                用例结果: 〖userphoto〗=&gt;Expected: 【/file/userphoto.jpg】, Actual: 【/file/userphoto.jpg】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case5
+      </td>
+  <td class="duration">
+    1.436s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 5<br />
+                                用例名称: 使用错误的账号，错误的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                                请求地址: http://120.79.232.23:8000/api/user/login<br />
+                                请求方式: POST<br />
+                                请求参数: username=123456&amp;password=123456789<br />
+                                返回结果: {&quot;code&quot;:&quot;999984&quot;,&quot;msg&quot;:&quot;账号或密码错误&quot;}<br />
+                                用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case6
+      </td>
+  <td class="duration">
+    1.372s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 6<br />
+                                用例名称: 使用错误的账号，正确的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                                请求地址: http://120.79.232.23:8000/api/user/login<br />
+                                请求方式: POST<br />
+                                请求参数: username=123456&amp;password=admin369874125<br />
+                                返回结果: {&quot;code&quot;:&quot;999984&quot;,&quot;msg&quot;:&quot;账号或密码错误&quot;}<br />
+                                用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  Case7
+      </td>
+  <td class="duration">
+    1.340s
+  </td>
+  <td class="result">
+        
+    
+            <div class="testOutput">
+                        用例ID: 7<br />
+                                用例名称: 使用正确的账号，错误的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                                请求地址: http://120.79.232.23:8000/api/user/login<br />
+                                请求方式: POST<br />
+                                请求参数: username=admin&amp;password=123456789<br />
+                                返回结果: {&quot;code&quot;:&quot;999984&quot;,&quot;msg&quot;:&quot;账号或密码错误&quot;}<br />
+                                用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】<br />
+                  </div>
+    
+
+      </td>
+</tr>
+      </table>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
+<head>
+  <title>Test Results Report - Log Output</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="description" content="TestNG unit test results." />
+  <link href="reportng.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>
+  <h1>Log Output</h1>
+  <p>
+    Combined output from all calls to the log methods of the <a href="http://testng.org/javadocs/org/testng/Reporter.html">TestNG Reporter</a>.    
+  </p>
+
+  <div id="log">
+                  用例ID: 1<br />
+                        用例名称: 使用正确的账号，正确的密码，可以正常登录成功，且接口返回的预期结果都正确<br />
+                        请求地址: http://120.79.232.23:8000/api/user/login<br />
+                        请求方式: POST<br />
+                        请求参数: username=admin&amp;password=admin369874125<br />
+                        返回结果: {&quot;code&quot;:&quot;999999&quot;,&quot;msg&quot;:&quot;成功&quot;,&quot;data&quot;:{&quot;first_name&quot;:&quot;admin&quot;,&quot;last_name&quot;:&quot;&quot;,&quot;phone&quot;:&quot;12345678911&quot;,&quot;email&quot;:&quot;admin@163.com&quot;,&quot;key&quot;:&quot;640ca3dbb875b6cfe898bf0c9b0f45a921ef169b&quot;,&quot;date_joined&quot;:&quot;2018-06-28 02:56:00&quot;,&quot;userphoto&quot;:&quot;/file/userphoto.jpg&quot;}}<br />
+                        用例结果: 〖first_name〗=&gt;Expected: 【admin】, Actual: 【admin】<br />
+                        用例结果: 〖last_name〗=&gt;Expected: 【】, Actual: 【】<br />
+                        用例结果: 〖phone〗=&gt;Expected: 【12345678911】, Actual: 【12345678911】<br />
+                        用例结果: 〖email〗=&gt;Expected: 【admin@163.com】, Actual: 【admin@163.com】<br />
+                        用例结果: 〖key〗=&gt;Expected: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】, Actual: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】<br />
+                        用例结果: 〖date_joined〗=&gt;Expected: 【2018-06-28 02:56:00】, Actual: 【2018-06-28 02:56:00】<br />
+                        用例结果: 〖userphoto〗=&gt;Expected: 【/file/userphoto.jpg】, Actual: 【/file/userphoto.jpg】<br />
+                        用例ID: 2<br />
+                        用例名称: 使用空值的账号，空值的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                        请求地址: http://120.79.232.23:8000/api/user/login<br />
+                        请求方式: POST<br />
+                        请求参数: username=&amp;password=<br />
+                        返回结果: {&quot;username&quot;:[&quot;该字段不能为空。&quot;],&quot;password&quot;:[&quot;该字段不能为空。&quot;],&quot;code&quot;:400}<br />
+                        用例ID: 3<br />
+                        用例名称: 使用空值的账号，正确的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                        请求地址: http://120.79.232.23:8000/api/user/login<br />
+                        请求方式: POST<br />
+                        请求参数: username=&amp;password=admin369874125<br />
+                        返回结果: {&quot;username&quot;:[&quot;该字段不能为空。&quot;],&quot;code&quot;:400}<br />
+                        用例ID: 4<br />
+                        用例名称: 使用正确的账号，空值的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                        请求地址: http://120.79.232.23:8000/api/user/login<br />
+                        请求方式: POST<br />
+                        请求参数: username=admin&amp;password=<br />
+                        返回结果: {&quot;password&quot;:[&quot;该字段不能为空。&quot;],&quot;code&quot;:400}<br />
+                        用例ID: 5<br />
+                        用例名称: 使用错误的账号，错误的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                        请求地址: http://120.79.232.23:8000/api/user/login<br />
+                        请求方式: POST<br />
+                        请求参数: username=123456&amp;password=123456789<br />
+                        返回结果: {&quot;code&quot;:&quot;999984&quot;,&quot;msg&quot;:&quot;账号或密码错误&quot;}<br />
+                        用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】<br />
+                        用例ID: 6<br />
+                        用例名称: 使用错误的账号，正确的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                        请求地址: http://120.79.232.23:8000/api/user/login<br />
+                        请求方式: POST<br />
+                        请求参数: username=123456&amp;password=admin369874125<br />
+                        返回结果: {&quot;code&quot;:&quot;999984&quot;,&quot;msg&quot;:&quot;账号或密码错误&quot;}<br />
+                        用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】<br />
+                        用例ID: 7<br />
+                        用例名称: 使用正确的账号，错误的密码，无法正常登录成功，且接口返回的预期结果都正确<br />
+                        请求地址: http://120.79.232.23:8000/api/user/login<br />
+                        请求方式: POST<br />
+                        请求参数: username=admin&amp;password=123456789<br />
+                        返回结果: {&quot;code&quot;:&quot;999984&quot;,&quot;msg&quot;:&quot;账号或密码错误&quot;}<br />
+                        用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】<br />
+            </div>
+
+</body>
+</html>

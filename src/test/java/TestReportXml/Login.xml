@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Web后端-接口自动化测试" parallel="false" configfailurepolicy ="continue">
+    <test name="用户登录接口" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.Login"/>
+                <methods>
+                    <include name="case1" />
+                    <include name="case2" />
+                    <include name="case3" />
+                    <include name="case4" />
+                    <include name="case5" />
+                    <include name="case6" />
+                    <include name="case7" />
+                    <exclude name="" />
+                </methods>
+        </classes>
+    </test>
+    <!-- ———————————————————————————————————————————————————————————————————————— 分           界             线  ———————————————————————————————————————————————————————————————————————— -->
+    <!-- 调用的监听 -->    
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>      
+</suite>

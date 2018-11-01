@@ -1,0 +1,183 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:math="http://exslt.org/math"
+      xmlns:testng="http://testng.org">
+   <head xmlns="">
+      <title>TestNG Results</title>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8"></meta>
+      <meta http-equiv="pragma" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="max-age=0"></meta>
+      <meta http-equiv="cache-control" content="no-cache"></meta>
+      <meta http-equiv="cache-control" content="no-store"></meta>
+      <LINK rel="stylesheet" href="style.css"></LINK>
+      <script type="text/javascript" src="main.js"></script>
+   </head>
+   <body>
+      <h2>Reporter output</h2>
+      <div><code>
+            用例ID: 1
+            </code></div>
+      <div><code>
+            用例名称: 使用正确的账号，正确的密码，可以正常登录成功，且接口返回的实际结果都正确
+            </code></div>
+      <div><code>
+            请求地址: http://120.79.232.23:8000/api/user/login
+            </code></div>
+      <div><code>
+            请求方式: POST
+            </code></div>
+      <div><code>
+            请求参数: username=admin&amp;password=admin369874125
+            </code></div>
+      <div><code>
+            返回结果: {"code":"999999","msg":"成功","data":{"first_name":"admin","last_name":"","phone":"12345678911","email":"admin@163.com","key":"640ca3dbb875b6cfe898bf0c9b0f45a921ef169b","date_joined":"2018-06-28
+            02:56:00","userphoto":"/file/userphoto.jpg"}}
+            </code></div>
+      <div><code>
+            用例结果: 〖first_name〗=&gt;Expected: 【admin】, Actual: 【admin】
+            </code></div>
+      <div><code>
+            用例结果: 〖last_name〗=&gt;Expected: 【】, Actual: 【】
+            </code></div>
+      <div><code>
+            用例结果: 〖phone〗=&gt;Expected: 【12345678911】, Actual: 【12345678911】
+            </code></div>
+      <div><code>
+            用例结果: 〖email〗=&gt;Expected: 【admin@163.com】, Actual: 【admin@163.com】
+            </code></div>
+      <div><code>
+            用例结果: 〖key〗=&gt;Expected: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】, Actual: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】
+            </code></div>
+      <div><code>
+            用例结果: 〖date_joined〗=&gt;Expected: 【2018-06-28 02:56:00】, Actual: 【2018-06-28 02:56:00】
+            </code></div>
+      <div><code>
+            用例结果: 〖userphoto〗=&gt;Expected: 【/file/userphoto.jpg】, Actual: 【/file/userphoto.jpg】
+            </code></div>
+      <div><code>
+            用例ID: 2
+            </code></div>
+      <div><code>
+            用例名称: 使用空值的账号，空值的密码，无法正常登录成功，且接口返回的实际结果都正确
+            </code></div>
+      <div><code>
+            请求地址: http://120.79.232.23:8000/api/user/login
+            </code></div>
+      <div><code>
+            请求方式: POST
+            </code></div>
+      <div><code>
+            请求参数: username=&amp;password=
+            </code></div>
+      <div><code>
+            返回结果: {"username":["该字段不能为空。"],"password":["该字段不能为空。"],"code":400}
+            </code></div>
+      <div><code>
+            用例ID: 3
+            </code></div>
+      <div><code>
+            用例名称: 使用空值的账号，正确的密码，无法正常登录成功，且接口返回的实际结果都正确
+            </code></div>
+      <div><code>
+            请求地址: http://120.79.232.23:8000/api/user/login
+            </code></div>
+      <div><code>
+            请求方式: POST
+            </code></div>
+      <div><code>
+            请求参数: username=&amp;password=admin369874125
+            </code></div>
+      <div><code>
+            返回结果: {"username":["该字段不能为空。"],"code":400}
+            </code></div>
+      <div><code>
+            用例ID: 4
+            </code></div>
+      <div><code>
+            用例名称: 使用正确的账号，空值的密码，无法正常登录成功，且接口返回的实际结果都正确
+            </code></div>
+      <div><code>
+            请求地址: http://120.79.232.23:8000/api/user/login
+            </code></div>
+      <div><code>
+            请求方式: POST
+            </code></div>
+      <div><code>
+            请求参数: username=admin&amp;password=
+            </code></div>
+      <div><code>
+            返回结果: {"password":["该字段不能为空。"],"code":400}
+            </code></div>
+      <div><code>
+            用例ID: 5
+            </code></div>
+      <div><code>
+            用例名称: 使用错误的账号，错误的密码，无法正常登录成功，且接口返回的实际结果都正确
+            </code></div>
+      <div><code>
+            请求地址: http://120.79.232.23:8000/api/user/login
+            </code></div>
+      <div><code>
+            请求方式: POST
+            </code></div>
+      <div><code>
+            请求参数: username=123456&amp;password=123456789
+            </code></div>
+      <div><code>
+            返回结果: {"code":"999984","msg":"账号或密码错误"}
+            </code></div>
+      <div><code>
+            用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】
+            </code></div>
+      <div><code>
+            用例ID: 6
+            </code></div>
+      <div><code>
+            用例名称: 使用错误的账号，正确的密码，无法正常登录成功，且接口返回的实际结果都正确
+            </code></div>
+      <div><code>
+            请求地址: http://120.79.232.23:8000/api/user/login
+            </code></div>
+      <div><code>
+            请求方式: POST
+            </code></div>
+      <div><code>
+            请求参数: username=123456&amp;password=admin369874125
+            </code></div>
+      <div><code>
+            返回结果: {"code":"999984","msg":"账号或密码错误"}
+            </code></div>
+      <div><code>
+            用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】
+            </code></div>
+      <div><code>
+            用例ID: 7
+            </code></div>
+      <div><code>
+            用例名称: 使用正确的账号，错误的密码，无法正常登录成功，且接口返回的实际结果都正确
+            </code></div>
+      <div><code>
+            请求地址: http://120.79.232.23:8000/api/user/login
+            </code></div>
+      <div><code>
+            请求方式: POST
+            </code></div>
+      <div><code>
+            请求参数: username=admin&amp;password=123456789
+            </code></div>
+      <div><code>
+            返回结果: {"code":"999984","msg":"账号或密码错误"}
+            </code></div>
+      <div><code>
+            用例结果: 〖msg〗=&gt;Expected: 【账号或密码错误】, Actual: 【账号或密码错误】
+            </code></div>
+      <div xmlns=""
+           style="margin-top: 15px; color: gray; text-align: center; font-size: 9px;">
+         Generated with
+         
+         <a href="http://code.google.com/p/testng-xslt/" style="color: #8888aa;"
+            target="_blank">
+            TestNG XSLT
+            
+         </a>
+      </div>
+   </body>
+</html>

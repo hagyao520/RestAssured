@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">2 suites, 3 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Web后端-接口自动化测试">
+              <span class="suite-name border-failed">Web后端-接口自动化测试</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Web后端-接口自动化测试">
+                    <span>D:\King\EclipseFX\RestAssured\src\test\java\TestReportXml\Login.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Web后端-接口自动化测试">
+                    <span class="test-stats">2 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Web后端-接口自动化测试">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Web后端-接口自动化测试">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Web后端-接口自动化测试">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Web后端-接口自动化测试">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Web后端-接口自动化测试">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">7 methods, 3 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Web后端-接口自动化测试" class="hide-methods failed suite-Web后端-接口自动化测试"> (hide)</a> <!-- hide-methods failed suite-Web后端-接口自动化测试 -->
+                      <a href="#" panel-name="suite-Web后端-接口自动化测试" class="show-methods failed suite-Web后端-接口自动化测试"> (show)</a> <!-- show-methods failed suite-Web后端-接口自动化测试 -->
+                    </span>
+                    <div class="method-list-content failed suite-Web后端-接口自动化测试">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Web后端-接口自动化测试" title="TestCases.Login" hash-for-method="Case2">Case2</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Web后端-接口自动化测试" title="TestCases.Login" hash-for-method="Case3">Case3</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Web后端-接口自动化测试" title="TestCases.Login" hash-for-method="Case4">Case4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Web后端-接口自动化测试 -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Web后端-接口自动化测试" class="hide-methods passed suite-Web后端-接口自动化测试"> (hide)</a> <!-- hide-methods passed suite-Web后端-接口自动化测试 -->
+                      <a href="#" panel-name="suite-Web后端-接口自动化测试" class="show-methods passed suite-Web后端-接口自动化测试"> (show)</a> <!-- show-methods passed suite-Web后端-接口自动化测试 -->
+                    </span>
+                    <div class="method-list-content passed suite-Web后端-接口自动化测试">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Web后端-接口自动化测试" title="TestCases.Login" hash-for-method="Case1">Case1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Web后端-接口自动化测试" title="TestCases.Login" hash-for-method="Case5">Case5</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Web后端-接口自动化测试" title="TestCases.Login" hash-for-method="Case6">Case6</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Web后端-接口自动化测试" title="TestCases.Login" hash-for-method="Case7">Case7</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Web后端-接口自动化测试 -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+        </div> <!-- panel Suite -->
+        <div panel-name="suite-Web后端-接口自动化测试" class="panel Web后端-接口自动化测试">
+          <div class="suite-Web后端-接口自动化测试-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">TestCases.Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Case2">
+                  </a> <!-- Case2 -->
+                  <span class="method-name">Case2</span>
+                  <div class="stack-trace">java.lang.AssertionError: msg =&gt;Expected 【账号和密码不能为空】 but found 【null】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.jmoney.luckeylink.handler.Login_Handler.checkEquals(Login_Handler.java:312)
+	at com.jmoney.luckeylink.handler.Login_Handler.Login(Login_Handler.java:288)
+	at TestCases.Login.Case2(Login.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Case3">
+                  </a> <!-- Case3 -->
+                  <span class="method-name">Case3</span>
+                  <div class="stack-trace">java.lang.AssertionError: msg =&gt;Expected 【账号不能为空】 but found 【null】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.jmoney.luckeylink.handler.Login_Handler.checkEquals(Login_Handler.java:312)
+	at com.jmoney.luckeylink.handler.Login_Handler.Login(Login_Handler.java:288)
+	at TestCases.Login.Case3(Login.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Case4">
+                  </a> <!-- Case4 -->
+                  <span class="method-name">Case4</span>
+                  <div class="stack-trace">java.lang.AssertionError: msg =&gt;Expected 【密码不能为空】 but found 【null】
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.jmoney.luckeylink.handler.Login_Handler.checkEquals(Login_Handler.java:312)
+	at com.jmoney.luckeylink.handler.Login_Handler.Login(Login_Handler.java:288)
+	at TestCases.Login.Case4(Login.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.InvokeMethodRunnable.runOne(InvokeMethodRunnable.java:54)
+	at org.testng.internal.InvokeMethodRunnable.run(InvokeMethodRunnable.java:44)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Web后端-接口自动化测试-class-failed -->
+          <div class="suite-Web后端-接口自动化测试-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">TestCases.Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Case1">
+                  </a> <!-- Case1 -->
+                  <span class="method-name">Case1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Case5">
+                  </a> <!-- Case5 -->
+                  <span class="method-name">Case5</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Case6">
+                  </a> <!-- Case6 -->
+                  <span class="method-name">Case6</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Case7">
+                  </a> <!-- Case7 -->
+                  <span class="method-name">Case7</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Web后端-接口自动化测试-class-passed -->
+        </div> <!-- panel Web后端-接口自动化测试 -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\King\EclipseFX\RestAssured\src\test\java\TestReportXml\ExtentReport.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.jmoney.luckeylink.service.ExtentReportGenerateService&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;suite-files&gt;
+    &lt;suite-file path=&quot;Login.xml&quot;/&gt;
+  &lt;/suite-files&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-Web后端-接口自动化测试" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\King\EclipseFX\RestAssured\src\test\java\TestReportXml\Login.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite configfailurepolicy=&quot;continue&quot; name=&quot;Web后端-接口自动化测试&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
+    &lt;listener class-name=&quot;com.jmoney.luckeylink.service.ExtentReportGenerateService&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;3&quot; name=&quot;用户登录接口&quot; time-out=&quot;6000000&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestCases.Login&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;case1&quot;/&gt;
+          &lt;include name=&quot;case2&quot;/&gt;
+          &lt;include name=&quot;case3&quot;/&gt;
+          &lt;include name=&quot;case4&quot;/&gt;
+          &lt;include name=&quot;case5&quot;/&gt;
+          &lt;include name=&quot;case6&quot;/&gt;
+          &lt;include name=&quot;case7&quot;/&gt;
+          &lt;exclude name=&quot;&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- TestCases.Login --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- 用户登录接口 --&gt;
+  &lt;test name=&quot;用户登录接口(failed)&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;TestCases.Login&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TearDown&quot;/&gt;
+          &lt;include name=&quot;Case3&quot;/&gt;
+          &lt;include name=&quot;Stup&quot;/&gt;
+          &lt;include name=&quot;Case4&quot;/&gt;
+          &lt;include name=&quot;Case2&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- TestCases.Login --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- 用户登录接口(failed) --&gt;
+&lt;/suite&gt; &lt;!-- Web后端-接口自动化测试 --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Web后端-接口自动化测试" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Web后端-接口自动化测试</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">用户登录接口 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">用户登录接口(failed) (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Web后端-接口自动化测试" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Web后端-接口自动化测试</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Web后端-接口自动化测试" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Web后端-接口自动化测试</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Web后端-接口自动化测试');
+function tableData_Web后端-接口自动化测试() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(7);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'Case1')
+data.setCell(0, 2, 'TestCases.Login')
+data.setCell(0, 3, 4342);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Case2')
+data.setCell(1, 2, 'TestCases.Login')
+data.setCell(1, 3, 1571);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Case6')
+data.setCell(2, 2, 'TestCases.Login')
+data.setCell(2, 3, 1549);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Case7')
+data.setCell(3, 2, 'TestCases.Login')
+data.setCell(3, 3, 1499);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Case5')
+data.setCell(4, 2, 'TestCases.Login')
+data.setCell(4, 3, 1491);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Case3')
+data.setCell(5, 2, 'TestCases.Login')
+data.setCell(5, 3, 1478);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Case4')
+data.setCell(6, 2, 'TestCases.Login')
+data.setCell(6, 3, 1473);
+window.suiteTableData['Web后端-接口自动化测试']= { tableData: data, tableDiv: 'times-div-Web后端-接口自动化测试'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <div id="times-div-Web后端-接口自动化测试">
+              </div> <!-- times-div-Web后端-接口自动化测试 -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Web后端-接口自动化测试" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Web后端-接口自动化测试</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Case5</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">用例ID: 5</span>
+                <span class="reporter-method-output">用例名称: 使用错误的账号，错误的密码，无法正常登录成功，且接口返回的实际结果都正确</span>
+                <span class="reporter-method-output">请求地址: http://120.79.232.23:8000/api/user/login</span>
+                <span class="reporter-method-output">请求方式: POST</span>
+                <span class="reporter-method-output">请求参数: username=123456&password=123456789</span>
+                <span class="reporter-method-output">返回结果: {"code":"999984","msg":"账号或密码错误"}</span>
+                <span class="reporter-method-output">用例结果: 〖msg〗=>Expected: 【账号或密码错误】, Actual: 【账号或密码错误】</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Case6</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">用例ID: 6</span>
+                <span class="reporter-method-output">用例名称: 使用错误的账号，正确的密码，无法正常登录成功，且接口返回的实际结果都正确</span>
+                <span class="reporter-method-output">请求地址: http://120.79.232.23:8000/api/user/login</span>
+                <span class="reporter-method-output">请求方式: POST</span>
+                <span class="reporter-method-output">请求参数: username=123456&password=admin369874125</span>
+                <span class="reporter-method-output">返回结果: {"code":"999984","msg":"账号或密码错误"}</span>
+                <span class="reporter-method-output">用例结果: 〖msg〗=>Expected: 【账号或密码错误】, Actual: 【账号或密码错误】</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Case1</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">用例ID: 1</span>
+                <span class="reporter-method-output">用例名称: 使用正确的账号，正确的密码，可以正常登录成功，且接口返回的实际结果都正确</span>
+                <span class="reporter-method-output">请求地址: http://120.79.232.23:8000/api/user/login</span>
+                <span class="reporter-method-output">请求方式: POST</span>
+                <span class="reporter-method-output">请求参数: username=admin&password=admin369874125</span>
+                <span class="reporter-method-output">返回结果: {"code":"999999","msg":"成功","data":{"first_name":"admin","last_name":"","phone":"12345678911","email":"admin@163.com","key":"640ca3dbb875b6cfe898bf0c9b0f45a921ef169b","date_joined":"2018-06-28 02:56:00","userphoto":"/file/userphoto.jpg"}}</span>
+                <span class="reporter-method-output">用例结果: 〖first_name〗=>Expected: 【admin】, Actual: 【admin】</span>
+                <span class="reporter-method-output">用例结果: 〖last_name〗=>Expected: 【】, Actual: 【】</span>
+                <span class="reporter-method-output">用例结果: 〖phone〗=>Expected: 【12345678911】, Actual: 【12345678911】</span>
+                <span class="reporter-method-output">用例结果: 〖email〗=>Expected: 【admin@163.com】, Actual: 【admin@163.com】</span>
+                <span class="reporter-method-output">用例结果: 〖key〗=>Expected: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】, Actual: 【640ca3dbb875b6cfe898bf0c9b0f45a921ef169b】</span>
+                <span class="reporter-method-output">用例结果: 〖date_joined〗=>Expected: 【2018-06-28 02:56:00】, Actual: 【2018-06-28 02:56:00】</span>
+                <span class="reporter-method-output">用例结果: 〖userphoto〗=>Expected: 【/file/userphoto.jpg】, Actual: 【/file/userphoto.jpg】</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Case7</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">用例ID: 7</span>
+                <span class="reporter-method-output">用例名称: 使用正确的账号，错误的密码，无法正常登录成功，且接口返回的实际结果都正确</span>
+                <span class="reporter-method-output">请求地址: http://120.79.232.23:8000/api/user/login</span>
+                <span class="reporter-method-output">请求方式: POST</span>
+                <span class="reporter-method-output">请求参数: username=admin&password=123456789</span>
+                <span class="reporter-method-output">返回结果: {"code":"999984","msg":"账号或密码错误"}</span>
+                <span class="reporter-method-output">用例结果: 〖msg〗=>Expected: 【账号或密码错误】, Actual: 【账号或密码错误】</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Case2</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">用例ID: 2</span>
+                <span class="reporter-method-output">用例名称: 使用空值的账号，空值的密码，无法正常登录成功，且接口返回的实际结果都正确</span>
+                <span class="reporter-method-output">请求地址: http://120.79.232.23:8000/api/user/login</span>
+                <span class="reporter-method-output">请求方式: POST</span>
+                <span class="reporter-method-output">请求参数: username=&password=</span>
+                <span class="reporter-method-output">返回结果: {"username":["该字段不能为空。"],"password":["该字段不能为空。"],"code":400}</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Case4</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">用例ID: 4</span>
+                <span class="reporter-method-output">用例名称: 使用正确的账号，空值的密码，无法正常登录成功，且接口返回的实际结果都正确</span>
+                <span class="reporter-method-output">请求地址: http://120.79.232.23:8000/api/user/login</span>
+                <span class="reporter-method-output">请求方式: POST</span>
+                <span class="reporter-method-output">请求参数: username=admin&password=</span>
+                <span class="reporter-method-output">返回结果: {"password":["该字段不能为空。"],"code":400}</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">Case3</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">用例ID: 3</span>
+                <span class="reporter-method-output">用例名称: 使用空值的账号，正确的密码，无法正常登录成功，且接口返回的实际结果都正确</span>
+                <span class="reporter-method-output">请求地址: http://120.79.232.23:8000/api/user/login</span>
+                <span class="reporter-method-output">请求方式: POST</span>
+                <span class="reporter-method-output">请求参数: username=&password=admin369874125</span>
+                <span class="reporter-method-output">返回结果: {"username":["该字段不能为空。"],"code":400}</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Web后端-接口自动化测试" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Web后端-接口自动化测试" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">TestCases.Login</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">Stup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Case1</span>
+                <span class="method-start">15186 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Case2</span>
+                <span class="method-start">19528 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Case3</span>
+                <span class="method-start">21100 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Case4</span>
+                <span class="method-start">22578 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Case5</span>
+                <span class="method-start">24051 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Case6</span>
+                <span class="method-start">25542 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Case7</span>
+                <span class="method-start">27091 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">TearDown</span>
+                <span class="method-start">28591 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

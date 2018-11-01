@@ -48,8 +48,8 @@
  - 工程项目编码需要设置成UTF-8，否则会出现中文乱码情况
 
  ---
-### 一、创建测试对象处理程序类，例如【LoginHandler.java】
-    package com.sales.webapi.handler;
+### 一、创建测试对象处理程序类，例如【Login_Handler.java】
+    package com.jmoney.luckeylink.handler;
 
     import java.io.IOException;
     import java.util.List;
@@ -59,479 +59,436 @@
     import org.testng.Assert;
     import org.testng.Reporter;
 
-    import com.sales.webapi.util.HttpRequestUtil;
-    import com.sales.webapi.util.MobileApiToolsUtil;
-    import com.sales.webapi.util.DataBaseUtil;
-    import com.sales.webapi.util.ExcelUtil;
+    import com.jmoney.luckeylink.controller.Login_Controller;
+    import com.jmoney.luckeylink.util.ExcelUtil;
+    import com.jmoney.luckeylink.util.MobileApiToolsUtil;
+    import com.jmoney.luckeylink.util.StringUtil;
+    import com.jmoney.luckeylink.util.DecodeUnicodeUtil;
 
-    public class LoginHandler {
-        private static Logger logger = Logger.getLogger(LoginHandler.class);
-
-      /**
-       * <br>获取Excel数据</br>
-       * @author  刘智King
-       * @date     2018年4月20日 下午6:01:04
-       */
+    public class Login_Handler {
+        private static Logger logger = Logger.getLogger(Login_Handler.class);
+        static int TITLE_LINE_INDEX=5;//接口用例标题所在行
+        static int ArgName_Number=2;//接口所需参数的个数
+        static int Act_Number=8;//接口需要效验参数的个数
+    
+        static String Param = null;//接口参数
+        static String msg_Act = null;
+    
+        /**
+         * <br>获取Excel数据</br>
+         * @author  刘智King
+         * @date     2018年4月20日 下午6:01:04
+         */
         public static void GetExcelInstance() {
-            logger.info(LoginHandler.class);
-            System.out.println(LoginHandler.class);
-        ExcelUtil.getInstance().setFilePath("src/test/resources/Excel/GiveU.Sales.WebApi.xlsx");
-        ExcelUtil.getInstance().setSheetName("Login");
+            logger.info(Login_Handler.class);
+            System.out.println(Login_Handler.class);
+            ExcelUtil.getInstance().setFilePath("src/test/java/TestCasexls/JMoney.Luckeylink.Api.xlsm");
+            ExcelUtil.getInstance().setSheetName("Login");
         }
     
-      /**
-       * <br>初始化Excel数据</br>
-       * @author  刘智King
-       * @date     2018年4月20日 下午6:01:04
-       */
+        /**
+         * <br>初始化Excel数据</br>
+         * @author  刘智King
+         * @date     2018年4月20日 下午6:01:04
+         */
         public static void InitializeExcelData() { 
-        t    ry {
+            GetExcelInstance();
+            int color = 4;
+            try {
                 logger.info("初始化: " + ExcelUtil.getInstance().getFilePath() + ", " + ExcelUtil.getInstance().getSheetName());
-                System.out.println("初始化: " + ExcelUtil.getInstance().getFilePath() + ", " + ExcelUtil.getInstance().getSheetName());
-                MobileApiToolsUtil.initializeData(6-1, "Run", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "$id_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "$id_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "phone_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "phone_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "roleId_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "roleId_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "roleName_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "roleName_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "salesId_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "salesId_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "userName_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "userName_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "identification_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "identification_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "photoName_Exp", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "photoName_Act", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "ActualResult", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "ResultCode", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "TestResult", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "RunningTime", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "Json", "", 4);
-                MobileApiToolsUtil.initializeData(6-1, "FailHint", "", 4);
-                logger.info(ExcelUtil.getInstance().getFilePath() + ", " + ExcelUtil.getInstance().getSheetName() + "初始化完成");
-                System.out.println(ExcelUtil.getInstance().getFilePath() + ", " + ExcelUtil.getInstance().getSheetName() + "初始化完成");
-                System.out.println("==============================================================================================================================================");
+                System.out.println("开始初始化: " + ExcelUtil.getInstance().getFilePath() + ", " + ExcelUtil.getInstance().getSheetName());
+
+                MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3)+"", "", color);
+                System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3)+"列");
+                if(Act_Number<1){
+                    for(int i =1;i<Act_Number+6;i++){
+                        MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number+i)+"", "", color);
+                        System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number+i)+"列");
+                    }
+                }else if(Act_Number==1){
+                    for(int i =1;i<Act_Number+6;i++){
+                        MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number+i)+"", "", color);
+                        System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number+i)+"列");
+                    }
+                }else if(Act_Number>1){
+                    for(int i =1;i<Act_Number+1;i++){
+                        if(StringUtil.isEqual(ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+2*i), ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+2*i+2))){
+                            System.out.println("效验值："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+2*i)+"重复，请检查后重试！");
+                            System.exit(0);
+                        }else{
+                            MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+2*i)+"", "", color);
+                            System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+2*i)+"列");
+                        }
+                    }
+                    MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+1)+"", "", color);
+                    System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+1)+"列");
+                    MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+2)+"", "", color);
+                    System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+2)+"列");
+                    MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+3)+"", "", color);
+                    System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+3)+"列");
+                    MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+4)+"", "", color);
+                    System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+4)+"列");
+                    MobileApiToolsUtil.initializeData(TITLE_LINE_INDEX, ""+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+5)+"", "", color);
+                    System.out.println("正在初始化："+ExcelUtil.getInstance().readExcelCell(TITLE_LINE_INDEX, 3+ArgName_Number+Act_Number*2+5)+"列");
+                }            
+                logger.info(ExcelUtil.getInstance().getFilePath() + ", " + ExcelUtil.getInstance().getSheetName() + " 初始化完成");
+                System.out.println(ExcelUtil.getInstance().getFilePath() + ", " + ExcelUtil.getInstance().getSheetName() + " 初始化完成");
+                System.out.println("==================================================================");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
 
-      /**
-       * <br>根据数据库版本和用例ID，从数据库获取信息并写入到Excel预期值</br>
-       * @author  刘智King
-       * @date     2018年4月20日 下午6:01:04
-       * @param  DataVersion
-       * @param  ID
-       */
+        /**
+         * <br>根据数据库版本和用例ID，从数据库获取信息并写入到Excel预期值</br>
+         * @author  刘智King
+         * @date     2018年4月20日 下午6:01:04
+         * @param  DataVersion
+         * @param  ID
+         */
         public static void WriteExcelExpected(String DataVersion,int ID){ 
-      
-          int TITLE_LINE_INDEX =6;
-          List<Map<String, String>> data = null;
-            data = ExcelUtil.getInstance().readExcelAllData(TITLE_LINE_INDEX-1);
+        
+            List<Map<String, String>> data = null;
+            data = ExcelUtil.getInstance().readExcelAllData(TITLE_LINE_INDEX);
         
             try {
-              if (data != null) {
-    //                for (int i = 0; i < data.size(); i++) {
-                  int i = ID;
-                    Map<String, String> map = data.get(i);
+                if (data != null) {
+                      int i = ID;
+                      Map<String, String> map = data.get(i);
                       String Sql =map.get("userId");
 
-                  logger.info("根据数据库查询结果, 开始写入预期值【Waiting...】");
-                  System.out.println("根据数据库查询结果, 开始写入预期值【Waiting...】");
+                      logger.info("根据数据库查询结果, 开始写入预期值【Waiting...】");
+                      System.out.println("根据数据库查询结果, 开始写入预期值【Waiting...】");
                   
-    //                  String $id_Exp= DataBase_Util.GetSqlResult(DataVersion, Sql,"$id_Exp");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "$id_Exp", "2");
-                
-                String phone_Exp= DataBaseUtil.GetSqlResult(DataVersion, Sql,"phone");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "phone_Exp", phone_Exp);
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "$id_Exp", "2");
+                  
+                      String phone_Exp= Login_Controller.GetSqlResult(DataVersion, Sql,"phone");
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "phone_Exp", phone_Exp);
 
-                String roleId_Exp= DataBaseUtil.GetSqlResult(DataVersion, Sql,"roleId");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "roleId_Exp", roleId_Exp);
-          
-                String roleName_Exp= DataBaseUtil.GetSqlResult(DataVersion, Sql,"roleName");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "roleName_Exp", roleName_Exp);
-                
-                String salesId_Exp= DataBaseUtil.GetSqlResult(DataVersion, Sql,"salesId");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "salesId_Exp", salesId_Exp);
-                
-                String userName_Exp= DataBaseUtil.GetSqlResult(DataVersion, Sql,"userName");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "userName_Exp", userName_Exp);
-                
-    //                String identification_Exp= DataBase_Util.GetSqlResult(DataVersion, Sql,"identification");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "identification_Exp", "string");
-                
-                String photoName_Exp= DataBaseUtil.GetSqlResult(DataVersion, Sql,"photoName");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "photoName_Exp", "http://10.10.11.136/"+photoName_Exp);
-                
-                 logger.info("对应用例预期值,写入成功【OK】");
-                 System.out.println("对应预期值,写入成功【OK】");
-                 System.out.println("==============================================================================================================================================");
-               }
-    //            } 
-        }catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-    
-      /**
-       * <br>根据用例ID，执行Login相关接口请求，获取Json信息，并写入结果到Excel</br>
-       * @author  刘智King
-       * @date     2018年4月20日 下午6:01:04
-       * @param  ID
-       */
-    public static void Login(int ID) throws Exception {
-
-        int TITLE_LINE_INDEX =6;
-        String PremiseUrl = "";
-        String ApiUrl = "";
-        String Act = "";
-        String Method = "";
-        List<Map<String, String>> data = null;
-        boolean Flag = false;
-
-        PremiseUrl = ExcelUtil.getInstance().readExcelCell(1-1, 2-1);
-        ApiUrl = ExcelUtil.getInstance().readExcelCell(2-1, 2-1);
-        Act = ExcelUtil.getInstance().readExcelCell(3-1, 2-1);
-        Method = ExcelUtil.getInstance().readExcelCell(4-1, 2-1);
-        Flag = MobileApiToolsUtil.isArgEquals(5-1, 2-1, TITLE_LINE_INDEX-1);
-
-        if (PremiseUrl.equals("") ||ApiUrl.equals("") || Act.equals("") || Method.equals("") || !Flag) {
-            logger.error("请检查 Excel 中 Interface、Act、Method、ArgName 是否设置正确...");
-            System.out.println("请检查 Excel 中 Interface、Act、Method、ArgName 是否设置正确...");
-            System.exit(-1);
-        }
-
-        data = ExcelUtil.getInstance().readExcelAllData(TITLE_LINE_INDEX-1);
-
-        if (data != null) {
-    //            for (int i = 0; i < data.size(); i++) {
-          
-            //根据Excel列名称,获取单元格内容
-            Map<String, String> map1 = data.get(0);
-            String userId1 = map1.get("userId");
-            String password1 = map1.get("password");
-            String type1 = map1.get("type");
-            String version1 = map1.get("version");
-            String identification1 = map1.get("identification");
- 
-            int i = ID;
-            //根据Excel列名称,获取单元格内容
-            Map<String, String> map = data.get(i);
-            String userId = map.get("userId");
-            String password = map.get("password");
-            String type = map.get("type");
-            String version = map.get("version");
-            String identification = map.get("identification");
+                      String roleId_Exp= Login_Controller.GetSqlResult(DataVersion, Sql,"roleId");
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "roleId_Exp", roleId_Exp);
             
-            //指定请求参数
-    //            final String Param1 = "{" +
-    //                    "\"userId\": \"666666\",\"password\": \"612426\",\"type\": \"string\",\"version\": \"string\",\"identification\": \"string\"}";
-            
-            final String Param1 = "{" +
-                    "\"userId\": \""+userId1+"\",\"password\": \""+password1+"\",\"type\": \""+type1+"\",\"version\": \""+version1+"\",\"identification\": \""+identification1+"\"}";
-            
-            final String Param = "{" +
-                    "\"userId\": \""+userId+"\",\"password\": \""+password+"\",\"type\": \""+type+"\",\"version\": \""+version+"\",\"identification\": \""+identification+"\"}";
-            
-            //指定请求方式,API地址,请求参数, 发起请求,获取Cookie值
-            Map<String, String> CookieVal = HttpRequestUtil.getPostCcookie(PremiseUrl,Param1);
-
-            String RsTmp = HttpRequestUtil.GetJsonResult(ApiUrl, Param,CookieVal);
-    //          int Code = HttpRequest_Util.GetStatusCode(ApiUrl, Param1, CookieVal);
-            int Code = HttpRequestUtil.GetJsonIntValue(ApiUrl, Param, CookieVal,"code");  
-            String message = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"message");
-
-            //写入Run列, 执行纪录
-            MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "Run", "Y");
-
-            //写入ResultCode列,返回的结果代码
-            MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "ResultCode", String.valueOf(Code));
-
-            //设置ResultCode单元格颜色
-            if (Code == 1000){
-                ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "ResultCode",TITLE_LINE_INDEX + i, 1);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "TestResult", "OK");
-                ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "TestResult",TITLE_LINE_INDEX + i, 1);
-                
-                String id_Act = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"data.$id");
-                String phone_Act = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"data.phone");
-                String roleId_Act = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"data.roleId");
-                String roleName_Act = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"data.roleName");
-                int salesId_Act = HttpRequestUtil.GetJsonIntValue(ApiUrl, Param, CookieVal,"data.salesId");
-                String userName_Act = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"data.userName");
-                String identification_Act = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"data.identification");
-                String photoName_Act = HttpRequestUtil.GetJsonStringValue(ApiUrl, Param, CookieVal,"data.photoName");
-
-                //期望结果与实际结果比较
-                String $id_Exp = MobileApiToolsUtil.assertResult(map.get("$id_Exp"),id_Act);
-                String phone_Exp = MobileApiToolsUtil.assertResult(map.get("phone_Exp"),phone_Act);
-                String roleId_Exp = MobileApiToolsUtil.assertResult(map.get("roleId_Exp"),roleId_Act);
-                String roleName_Exp = MobileApiToolsUtil.assertResult(map.get("roleName_Exp"),roleName_Act);
-                String salesId_Exp = MobileApiToolsUtil.assertResult(map.get("salesId_Exp"), String.valueOf(salesId_Act));
-                String userName_Exp = MobileApiToolsUtil.assertResult(map.get("userName_Exp"),userName_Act);
-                String identification_Exp = MobileApiToolsUtil.assertResult(map.get("identification_Exp"),identification_Act);
-                String photoName_Exp = MobileApiToolsUtil.assertResult(map.get("photoName_Exp"),photoName_Act);
-                
-                //写入实际结果
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "$id_Act", id_Act);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "phone_Act", phone_Act);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "roleId_Act", roleId_Act);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "roleName_Act", roleName_Act);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "salesId_Act", String.valueOf(salesId_Act));
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "userName_Act", userName_Act);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "identification_Act", identification_Act);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "photoName_Act", photoName_Act);
-
-                //写入测试结果单元格背景色
-                if ($id_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "$id_Act",TITLE_LINE_INDEX + i, 0);}
-
-                //写入测试结果单元格背景色
-                if (phone_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "phone_Act",TITLE_LINE_INDEX + i, 0);}
-
-                //写入测试结果单元格背景色
-                if (roleId_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "roleId_Act",TITLE_LINE_INDEX + i, 0);}
-                
-                //写入测试结果单元格背景色
-                if (roleName_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "roleName_Act",TITLE_LINE_INDEX + i, 0);}
-                
-                //写入测试结果单元格背景色
-                if (salesId_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "salesId_Act",TITLE_LINE_INDEX + i, 0);}
-                
-                //写入测试结果单元格背景色
-                if (userName_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "userName_Act",TITLE_LINE_INDEX + i, 0);}
-                
-                //写入测试结果单元格背景色
-                if (identification_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "identification_Act",TITLE_LINE_INDEX + i, 0);}
-                
-                //写入测试结果单元格背景色
-                if (photoName_Exp.equals("OK")){}
-                else{
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "photoName_Act",TITLE_LINE_INDEX + i, 0);}
-                
-                //写入测试通过与否,设置测试结果单元格背景色
-    //              &是位与操作，一定会执行； &&是逻辑与操作，如果&&的前面为false了，后面的就不会执行了。
-    //              |是位或操作、一定会执行； || 是逻辑或操作，如果||的前面为true了，||的后面就不会执行了
-                if ($id_Exp.equals("OK")&phone_Exp.equals("OK")&roleId_Exp.equals("OK")&roleName_Exp.equals("OK")&
-                        salesId_Exp.equals("OK")&userName_Exp.equals("OK")&identification_Exp.equals("OK")&photoName_Exp.equals("OK")){
-                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "TestResult", "OK");
-                    ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "TestResult",TITLE_LINE_INDEX + i, 1);}
-                else{
-                  MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "TestResult", "NG");
-                  ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "TestResult",TITLE_LINE_INDEX + i, 0);}
-                
-                //写入执行时间
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "RunningTime", MobileApiToolsUtil.getDate());
-
-                //写入转换的JSON结果
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "Json", RsTmp);
-                
-            }else{
-                ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "ResultCode",TITLE_LINE_INDEX + i, 0);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "TestResult", "NG");
-              ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX-1, "TestResult",TITLE_LINE_INDEX + i, 0);
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "FailHint", "【message】"+message+"");
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "RunningTime", MobileApiToolsUtil.getDate());
-                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "Json", RsTmp);
-            }   
-        }
-    //        }
+                      String roleName_Exp= Login_Controller.GetSqlResult(DataVersion, Sql,"roleName");
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "roleName_Exp", roleName_Exp);
+                  
+                      String salesId_Exp= Login_Controller.GetSqlResult(DataVersion, Sql,"salesId");
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "salesId_Exp", salesId_Exp);
+                  
+                      String userName_Exp= Login_Controller.GetSqlResult(DataVersion, Sql,"userName");
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "userName_Exp", userName_Exp);
+                  
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "identification_Exp", "string");
+                  
+                      String photoName_Exp= Login_Controller.GetSqlResult(DataVersion, Sql,"photoName");
+                      MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "photoName_Exp", "http://10.10.11.136/"+photoName_Exp);
+                  
+                     logger.info("对应用例预期值,写入成功【OK】");
+                     System.out.println("对应预期值,写入成功【OK】");
+                     System.out.println("==================================================================");
+                   }
+            }catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     
-      /**
-       * <br>根据用例ID，获取用例名称信息，打印到控制台并写入Excel</br>
-       * @author  刘智King
-       * @date     2018年4月20日 下午6:01:04
-       * @param  ID
-       */
-    public static void GetCaseInfo(int ID) throws Exception {
-      
-      int TITLE_LINE_INDEX=6;
-      List<Map<String, String>> data = null;
-      data = ExcelUtil.getInstance().readExcelAllData(TITLE_LINE_INDEX-1);
-      if (data != null) {
-    //            for (int i = 0; i < data.size(); i++) {
+        /**
+         * <br>根据用例ID，执行Login相关接口请求，获取Json信息，并写入结果到Excel</br>
+         * @author  刘智King
+         * @date     2018年4月20日 下午6:01:04
+         * @param  ID
+         */
+        public static void Login(int ID) throws Exception {
+            GetExcelInstance();
+            boolean ArgName = false;
+            List<Map<String, String>> data = null;
+        
+            String ApiUrl = ExcelUtil.getInstance().readExcelCell(1, 2);
+            String Act = ExcelUtil.getInstance().readExcelCell(2, 2);
+            String Method = ExcelUtil.getInstance().readExcelCell(3, 2);
+            ArgName = MobileApiToolsUtil.isArgEquals(4, 2, TITLE_LINE_INDEX);
+
+            if (ApiUrl.equals("") || Act.equals("") || Method.equals("") || !ArgName) {
+                logger.error("请检查 Excel 中 ApiUrl、Act、Method、ArgName 是否设置正确...");
+                System.out.println("请检查 Excel 中 ApiUrl、Act、Method、ArgName 是否设置正确...");
+                System.exit(-1);
+            }
+
+            data = ExcelUtil.getInstance().readExcelAllData(TITLE_LINE_INDEX);
+
+            if (data != null) {
                 int i = ID;
-                
-              //根据Excel列名称,获取单元格内容
-                Map<String, String> map = data.get(i);
+                //根据Excel列名称,获取单元格内容
+                Map<String, String> map = data.get(i-1);//从第一个用例开始，0代表就是第一个
                 String CaseID = map.get("CaseID");
                 String CaseName = map.get("CaseName");
-                String $id_Exp = map.get("$id_Exp");
-                String $id_Act = map.get("$id_Act");
-                String phone_Exp = map.get("phone_Exp");
-                String phone_Act = map.get("phone_Act");
-                String roleId_Exp = map.get("roleId_Exp");
-                String roleId_Act = map.get("roleId_Act");
-                String roleName_Exp = map.get("roleName_Exp");
-                String roleName_Act = map.get("roleName_Act");
-                String salesId_Exp = map.get("salesId_Exp");
-                String salesId_Act = map.get("salesId_Act");
-                String userName_Exp = map.get("userName_Exp");
-                String userName_Act = map.get("userName_Act");
-                String identification_Exp = map.get("identification_Exp");
-                String identification_Act = map.get("identification_Act");
-                String photoName_Exp = map.get("photoName_Exp");
-                String photoName_Act = map.get("photoName_Act");
-                String ResultCode = map.get("ResultCode");
-                String TestResult = map.get("TestResult");
-                String FailHint = map.get("FailHint");
-                
-                //打印Caseinfo
-                logger.info("CaseID: " + CaseID + ", CaseName: " + CaseName + ", $id_Exp: " + $id_Exp + ", $id_Act: " + $id_Act + ", phone_Exp: " + phone_Exp + ", phone_Act: " + phone_Act +
-                ", roleId_Exp: " + roleId_Exp + ", roleId_Act: " + roleId_Act + ", roleName_Exp: " + roleName_Exp + ", roleName_Act: " + roleName_Act + ", salesId_Exp: " + salesId_Exp + ", salesId_Act: " + salesId_Act +
-                ", userName_Exp: " + userName_Exp +", userName_Act: " + userName_Act + ", identification_Exp: " + identification_Exp +", identification_Act: " + identification_Act + ", photoName_Exp: " + photoName_Exp +", photoName_Act: " + photoName_Act +
-                ", ResultCode: " + ResultCode +", TestResult: " + TestResult+ ", FailHint: " + FailHint);
-                logger.info("==============================================================================================================================================");
-
-                
-                System.out.println("CaseID: " + CaseID + ", CaseName: " + CaseName + ", $id_Exp: " + $id_Exp + ", $id_Act: " + $id_Act + ", phone_Exp: " + phone_Exp + ", phone_Act: " + phone_Act +
-                ", roleId_Exp: " + roleId_Exp + ", roleId_Act: " + roleId_Act + ", roleName_Exp: " + roleName_Exp + ", roleName_Act: " + roleName_Act + ", salesId_Exp: " + salesId_Exp + ", salesId_Act: " + salesId_Act +
-                ", userName_Exp: " + userName_Exp +", userName_Act: " + userName_Act + ", identification_Exp: " + identification_Exp +", identification_Act: " + identification_Act + ", photoName_Exp: " + photoName_Exp +", photoName_Act: " + photoName_Act +
-                ", ResultCode: " + ResultCode +", TestResult: " + TestResult + ", FailHint: " + FailHint);
-                System.out.println("==============================================================================================================================================");
-            }
-    //        }
-    }
-    
-      /**
-       * <br>根据用例ID，检查预期与实际是否相等，不等则提示错误信息，并写入结果</br>
-       * @author  刘智King
-       * @date     2018年4月20日 下午6:01:04
-       * @param  ID
-       */
-      public static void resultCheck(int ID) throws IOException{
-    
-    String ApiUrl = "";
-    List<Map<String, String>> data = null;
-    
-    ApiUrl = ExcelUtil.getInstance().readExcelCell(2-1, 2-1);
-    
-      data = ExcelUtil.getInstance().readExcelAllData(6-1);
-          
-      if (data != null) {
-    //            for (int i = 0; i < data.size(); i++) {
-            int i = ID;
-              
-              //根据Excel列名称,获取单元格内容
-                Map<String, String> map = data.get(i);
-                String CaseID = map.get("CaseID");
-                String CaseName = map.get("CaseName");
-                String userId = map.get("userId");
+                String username = map.get("username");
                 String password = map.get("password");
-                String type = map.get("type");
-                String version = map.get("version");
-                String identification = map.get("identification");
-                String $id_Exp = map.get("$id_Exp");
-                String $id_Act = map.get("$id_Act");
-                String phone_Exp = map.get("phone_Exp");
-                String phone_Act = map.get("phone_Act");
-                String roleId_Exp = map.get("roleId_Exp");
-                String roleId_Act = map.get("roleId_Act");
-                String roleName_Exp = map.get("roleName_Exp");
-                String roleName_Act = map.get("roleName_Act");
-                String salesId_Exp = map.get("salesId_Exp");
-                String salesId_Act = map.get("salesId_Act");
-                String userName_Exp = map.get("userName_Exp");
-                String userName_Act = map.get("userName_Act");
-                String identification_Exp = map.get("identification_Exp");
-                String identification_Act = map.get("identification_Act");
-                String photoName_Exp = map.get("photoName_Exp");
-                String photoName_Act = map.get("photoName_Act");
-                String Json = map.get("Json");
-             
-                Reporter.log("用例ID: "+ CaseID);        
-            Reporter.log("用例名称:"+ CaseName);
-            Reporter.log("请求地址: "+ ApiUrl);
-            Reporter.log("请求参数: "+ "userId: " + userId + ", password: " + password + ", type: " + type + 
-                     ", version: " + version + ", identification: "+ identification);
-            Reporter.log("返回结果: "+ Json);
             
-            checkEquals("$id",$id_Exp,$id_Act,ID);  
-            checkEquals("phone",phone_Exp,phone_Act,ID);
-            checkEquals("roleId",roleId_Exp,roleId_Act,ID);
-            checkEquals("roleName",roleName_Exp,roleName_Act,ID);
-            checkEquals("salesId",salesId_Exp,salesId_Act,ID);
-            checkEquals("userName",userName_Exp,userName_Act,ID);
-            checkEquals("identification",identification_Exp,identification_Act,ID);           
-            checkEquals("photoName",photoName_Exp,photoName_Act,ID);
-            }
-    //        }
-      }
+                //写入Run列, 执行纪录，Y代表已执行
+                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "Run", "Y");
 
-      public static void checkEquals(String Expected,String Actual,String FailHint,int ID){
-    int i = ID;
-    int TITLE_LINE_INDEX =6;
-    try {
-      Assert.assertEquals(Expected,Actual);
-      Reporter.log("用例结果: 〖"+FailHint+"〗=>Expected: " + "【"+Expected+"】" + ", Actual: "+ "【"+Actual+"】");
-          System.out.println("用例结果: 【"+FailHint+"】=>Expected: " + "【"+Expected+"】" + ", Actual: "+ "【"+Actual+"】");
+               //指定请求的Api地址
+               Param = "username="+username+"&password="+password+"";
+
+                //请求接口，获取UserInfo数组
+                Object[] UserInfo = Login_Controller.GetUserInfo(ID,ApiUrl,Param);
+
+                //从UserInfo数组中，读取StatusCode并写入
+                String code = (String) UserInfo[1];
+                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "StatusCode",code);
+            
+                //判断StatusCode结果是否等于999999，成立则TestResult写入OK并设置单元格颜色为绿色，反则写入NG并设置单元格颜色为红色，并写入失败消息提示
+                if ("999999".equals(code)){
+                    ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "StatusCode",TITLE_LINE_INDEX + i, 1);
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "TestResult", "OK");
+                    ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "TestResult",TITLE_LINE_INDEX + i, 1);
+                    //从UserInfo数组中，读取msg_Act结果并写入       
+                   msg_Act = (String) UserInfo[2];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "msg_Act", msg_Act);
+                }else if ("400".equals(code)){
+                    ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "StatusCode",TITLE_LINE_INDEX + i, 0);
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "TestResult", "NG");
+                    ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "TestResult",TITLE_LINE_INDEX + i, 0);
+                    //从UserInfo数组中，读取message消息结果并写入
+                    String message = (String) UserInfo[0];
+                    String NewMessage=DecodeUnicodeUtil.decodeUnicode(message);
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "FailHint", NewMessage);
+                    msg_Act=null;
+                }else{
+                    ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "StatusCode",TITLE_LINE_INDEX + i, 0);
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "TestResult", "NG");
+                    ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "TestResult",TITLE_LINE_INDEX + i, 0);
+                    //从UserInfo数组中，读取message消息结果并写入
+                    msg_Act = (String) UserInfo[2];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "msg_Act", msg_Act);
+                }
+
+                //写入执行时间
+                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "RunningTime", MobileApiToolsUtil.getDate());
+
+                //从UserInfo数组中，读取JSON结果并编码转换后写入
+                String Json = (String) UserInfo[0];
+                String NewJson=DecodeUnicodeUtil.decodeUnicode(Json);
+                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "Json", NewJson);
+            
+                if("成功".equals(msg_Act)){
+                    //从UserInfo数组中，读取first_name_Act结果并写入       
+                    String first_name_Act = (String) UserInfo[3];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "first_name_Act", first_name_Act);
+                
+                    //从UserInfo数组中，读取last_name_Act结果并写入       
+                    String last_name_Act = (String) UserInfo[4];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "last_name_Act", last_name_Act);
+                
+                    //从UserInfo数组中，读取phone_Act结果并写入       
+                    String phone_Act = (String) UserInfo[5];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "phone_Act", phone_Act);
+
+                    //从UserInfo数组中，读取email_Act结果并写入       
+                    String email_Act = (String) UserInfo[6];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "email_Act", email_Act);
+
+                    //从UserInfo数组中，读取key_Act结果并写入       
+                    String key_Act = (String) UserInfo[7];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "key_Act", key_Act);
+                
+                    //从UserInfo数组中，读取date_joined_Act结果并写入       
+                    String date_joined_Act = (String) UserInfo[8];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "date_joined_Act", date_joined_Act);
+                
+                    //从UserInfo数组中，读取userphoto_Act结果并写入       
+                    String userphoto_Act = (String) UserInfo[9];
+                    MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "userphoto_Act", userphoto_Act);
+
+                    Reporter.log("用例ID: "+ CaseID);        
+                    Reporter.log("用例名称: "+ CaseName);
+                    Reporter.log("请求地址: "+ ApiUrl);
+                    Reporter.log("请求方式: "+ Method);
+                    Reporter.log("请求参数: "+ Param);
+                    Reporter.log("返回结果: "+ NewJson);
+                
+                    String first_name_Exp = map.get("first_name_Exp");
+                    String last_name_Exp = map.get("last_name_Exp");
+                    String phone_Exp = map.get("phone_Exp");
+                    String email_Exp = map.get("email_Exp");
+                    String key_Exp = map.get("key_Exp");
+                    String date_joined_Exp = map.get("date_joined_Exp");
+                    String userphoto_Exp = map.get("userphoto_Exp");
+
+                    //检查预期结果和实际结果是否正确
+                    checkEquals(first_name_Exp,first_name_Act,"first_name_Exp","first_name_Act",ID);     
+                    checkEquals(last_name_Exp,last_name_Act,"last_name_Exp","last_name_Act",ID);     
+                    checkEquals(phone_Exp,phone_Act,"phone_Exp","phone_Act",ID);     
+                    checkEquals(email_Exp,email_Act,"email_Exp","email_Act",ID);     
+                    checkEquals(key_Exp,key_Act,"key_Exp","key_Act",ID);     
+                    checkEquals(date_joined_Exp,date_joined_Act,"date_joined_Exp","date_joined_Act",ID);     
+                    checkEquals(userphoto_Exp,userphoto_Act,"userphoto_Exp","userphoto_Act",ID);     
+                }else{
+                    Reporter.log("用例ID: "+ CaseID);        
+                    Reporter.log("用例名称: "+ CaseName);
+                    Reporter.log("请求地址: "+ ApiUrl);
+                    Reporter.log("请求方式: "+ Method);
+                    Reporter.log("请求参数: "+ Param);
+                    Reporter.log("返回结果: "+ NewJson);
+                
+                    String msg_Exp = map.get("msg_Exp");
+                    checkEquals(msg_Exp,msg_Act,"msg_Exp","msg_Act",ID);     
+                }
+            }
         }
-      catch (Error e)  {
-        MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX-1, TITLE_LINE_INDEX + i, "FailHint", "【"+FailHint+"】预期结果和实际结果不一致");
-        Assert.fail(""+FailHint+" =>Expected 【"+ Expected +"】"+" "+"but found 【"+ Actual +"】");
+
+        /**
+         * <br>根据用例ID，检查预期与实际是否相等，不等则提示错误信息，并写入结果</br>
+         * @author  刘智King
+         * @date     2018年4月20日 下午6:01:04
+         * @param  ID
+         */
+        public static void checkEquals(String Expected,String Actual,String ExpectedList,String ActualList,int ID) throws Exception{
+            int i = ID;
+            try {
+                Assert.assertEquals(Expected,Actual);
+                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "TestResult", "OK");
+                ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "TestResult",TITLE_LINE_INDEX + i, 1);
+                Reporter.log("用例结果: 〖"+ExpectedList.replace("_Exp", "")+"〗=>Expected: " + "【"+Expected+"】" + ", Actual: "+ "【"+Actual+"】");
+                System.out.println("用例结果: 【"+ExpectedList.replace("_Exp", "")+"】=>Expected: " + "【"+Expected+"】" + ", Actual: "+ "【"+Actual+"】");
+            }catch (Error e)  {
+                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "TestResult", "NG");
+                ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, "TestResult",TITLE_LINE_INDEX + i, 0);
+                ExcelUtil.getInstance().setCellBackgroundColor(TITLE_LINE_INDEX, ActualList,TITLE_LINE_INDEX + i, 3);
+                MobileApiToolsUtil.writeResult(TITLE_LINE_INDEX, TITLE_LINE_INDEX + i, "FailHint", "【"+ExpectedList+"】和【"+ActualList+"】不一致");
+                Assert.fail(""+ExpectedList.replace("_Exp", "")+" =>Expected 【"+ Expected +"】"+" "+"but found 【"+ Actual +"】");
+            }
+        }
+    
+        /**
+         * <br>根据用例ID，获取用例名称信息，打印到控制台并写入Excel</br>
+         * @author  刘智King
+         * @date     2018年4月20日 下午6:01:04
+         * @param  ID
+         */
+        public static void GetCaseInfo(int ID) throws Exception {
+            GetExcelInstance();
+            List<Map<String, String>> data = null;
+            data = ExcelUtil.getInstance().readExcelAllData(TITLE_LINE_INDEX);
+
+            if (data != null) {
+                    int i = ID;
+                    //根据Excel列名称,获取单元格内容
+                    Map<String, String> map = data.get(i-1);
+                    String CaseID = map.get("CaseID");
+                    String CaseName = map.get("CaseName");
+  
+                    String msg_Exp = map.get("msg_Exp");
+                    String first_name_Exp = map.get("first_name_Exp");
+                    String last_name_Exp = map.get("last_name_Exp");
+                    String phone_Exp = map.get("phone_Exp");
+                    String email_Exp = map.get("email_Exp");
+                    String key_Exp = map.get("key_Exp");
+                    String date_joined_Exp = map.get("date_joined_Exp");
+                    String userphoto_Exp = map.get("userphoto_Exp");
+                
+                    String msg_Act = map.get("msg_Act");
+                    String first_name_Act = map.get("first_name_Act");
+                    String last_name_Act = map.get("last_name_Act");
+                    String phone_Act = map.get("phone_Act");
+                    String email_Act = map.get("email_Act");
+                    String key_Act = map.get("key_Act");
+                    String date_joined_Act = map.get("date_joined_Act");
+                    String userphoto_Act = map.get("userphoto_Act");
+                
+                    String StatusCode = map.get("StatusCode");
+                    String TestResult = map.get("TestResult");
+                    String FailHint = map.get("FailHint");
+
+                    //打印日志
+                    logger.info("CaseID: " + CaseID + ", CaseName: " + CaseName +  
+                            ", msg_Exp: " + msg_Exp +", msg_Act: " + msg_Act+ 
+                            ", first_name_Exp: " + first_name_Exp +", first_name_Act: " + first_name_Act+ 
+                            ", last_name_Exp: " + last_name_Exp +", last_name_Act: " + last_name_Act+
+                            ", phone_Exp: " + phone_Exp +", phone_Act: " + phone_Act+
+                            ", email_Exp: " + email_Exp +", email_Act: " + email_Act+
+                            ", key_Exp: " + key_Exp +", key_Act: " + key_Act+
+                            ", date_joined_Exp: " + date_joined_Exp +", date_joined_Act: " + date_joined_Act+
+                            ", userphoto_Exp: " + userphoto_Exp +", userphoto_Act: " + userphoto_Act+
+                            ", StatusCode: " + StatusCode +", TestResult: " + TestResult + ", FailHint: " + FailHint + "");
+                    logger.info("==================================================================");
+
+                    System.out.println("CaseID: " + CaseID + ", CaseName: " + CaseName +  
+                            ", msg_Exp: " + msg_Exp +", msg_Act: " + msg_Act+ 
+                            ", first_name_Exp: " + first_name_Exp +", first_name_Act: " + first_name_Act+ 
+                            ", last_name_Exp: " + last_name_Exp +", last_name_Act: " + last_name_Act+
+                            ", phone_Exp: " + phone_Exp +", phone_Act: " + phone_Act+
+                            ", email_Exp: " + email_Exp +", email_Act: " + email_Act+
+                            ", key_Exp: " + key_Exp +", key_Act: " + key_Act+
+                           ", date_joined_Exp: " + date_joined_Exp +", date_joined_Act: " + date_joined_Act+
+                            ", userphoto_Exp: " + userphoto_Exp +", userphoto_Act: " + userphoto_Act+
+                            ", StatusCode: " + StatusCode +", TestResult: " + TestResult + ", FailHint: " + FailHint + "");
+                      System.out.println("==================================================================");   
+                }
+          }
       }
-      }
-    }
 
  ---
-### 二、创建测试对象脚本用例类，例如【LoginTest.java】
-    package TestCase;
+### 二、创建测试对象脚本用例类，例如【Login.java】
+    package TestCases;
 
     import org.testng.annotations.AfterTest;
     import org.testng.annotations.BeforeTest;
     import org.testng.annotations.Test;
 
-    import com.sales.webapi.handler.LoginHandler;
+    import com.jmoney.luckeylink.handler.Login_Handler;
 
-    public class LoginTest {
+    public class Login {
      
         @BeforeTest
         private void Stup() throws Exception{
-            LoginHandler.GetExcelInstance();
-            LoginHandler.InitializeExcelData();
-            LoginHandler.WriteExcelExpected("测试环境",12);
+            Login_Handler.InitializeExcelData();
         }
     
         @Test
         public void Case1() throws Exception{
-            LoginHandler.Login(1);  
-            LoginHandler.resultCheck(1);
+            Login_Handler.Login(1); 
         }
-  
+    
         @Test
         public void Case2() throws Exception{
-             LoginHandler.Login(2);  
-             LoginHandler.resultCheck(2);
+            Login_Handler.Login(2); 
         }
     
         @Test
         public void Case3() throws Exception{
-            LoginHandler.Login(3);  
-            LoginHandler.resultCheck(3);
+            Login_Handler.Login(3); 
         }
-  
+    
+        @Test
+        public void Case4() throws Exception{
+            Login_Handler.Login(4); 
+        }
+    
+        @Test
+        public void Case5() throws Exception{
+            Login_Handler.Login(5); 
+        }
+    
+        @Test
+        public void Case6() throws Exception{
+            Login_Handler.Login(6); 
+        }
+    
+        @Test
+        public void Case7() throws Exception{
+            Login_Handler.Login(7); 
+        }
+    
         @AfterTest
         public void TearDown() throws Exception{
-            LoginHandler.GetCaseInfo(1);
-            LoginHandler.GetCaseInfo(2);
-            LoginHandler.GetCaseInfo(3);
+            Login_Handler.GetCaseInfo(1);
+            Login_Handler.GetCaseInfo(2);
+            Login_Handler.GetCaseInfo(3);
+            Login_Handler.GetCaseInfo(4);
+            Login_Handler.GetCaseInfo(5);
+            Login_Handler.GetCaseInfo(6);
+            Login_Handler.GetCaseInfo(7);
         }
     }
 
@@ -544,17 +501,17 @@
  --- 
 ### 三、Rest Assured测试用例文档配置：
     public static void GetExcelInstance() {
-        logger.info(LoginHandler.class);
-        System.out.println(LoginHandler.class);
-        ExcelUtil.getInstance().setFilePath("src/test/resources/Excel/GiveU.Sales.WebApi.xlsx");
+        logger.info(Login_Handler.class);
+        System.out.println(Login_Handler.class);
+        ExcelUtil.getInstance().setFilePath("src/test/java/TestCasexls/JMoney.Luckeylink.Api.xlsm");
         ExcelUtil.getInstance().setSheetName("Login");
     }
 
- - 测试执行时需要在指定对应Excel测试用例文档路径和Sheet工作表名，当前为GiveU.Sales.WebApi.xlsx，和Login工作表
+ - 测试执行时需要在指定对应Excel测试用例文档路径和Sheet工作表名，当前为JMoney.Luckeylink.Api.xlsm，和Login工作表
 
  ---
 ### 四、执行用例：
- - 编写完对应测试对象处理程序类【LoginHandler.java】，和测试对象脚本用例类【LoginTest.java】后，在Eclipse项目下选择LoginTest.java右键使用TestNG运行即可
+ - 编写完对应测试对象处理程序类【LoginHandler.java】，和测试对象脚本用例类【Login.java】后，在Eclipse项目下选择Login.java右键使用TestNG运行即可
 ![](https://testerhome.com/uploads/photo/2018/d1e4ae98-55b3-482a-914e-211cc27f16ca.png!large)
 
  ---
@@ -563,42 +520,47 @@
 
 #### [TestngReport](https://testerhome.com/uploads/photo/2018/8da0567e-881e-4e01-af90-3928b1456d8e.png!large)
     <?xml version="1.0" encoding="UTF-8"?>
-    <suite name="Rest Assured测试报告" parallel="false" configfailurepolicy ="continue">
-        <test name="销售服务系统-登录接口测试场景点" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="60000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
-            <classes>
-                <class name="TestCase.LoginTest"/>
-                    <methods>
-                        <include name="case1" />
-                        <include name="case2" />
-                        <include name="case3" />
-                    </methods>
-            </classes>
-        </test>  
-     ------------------------------------------------------------------------------------------------------
+    <suite name="Web后端-接口自动化测试" parallel="false" configfailurepolicy ="continue">
+    <test name="用户登录接口" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc" time-out="6000000" enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.Login"/>
+                <methods>
+                    <include name="case1" />
+                    <include name="case2" />
+                    <include name="case3" />
+                    <include name="case4" />
+                    <include name="case5" />
+                    <include name="case6" />
+                    <include name="case7" />
+                    <exclude name="" />
+                </methods>
+        </classes>
+    </test>
+    <!-- —————————————————————————— 分           界             线  ———————————————————————————— -->
     <!-- 调用的监听 -->    
-        <listeners>
-            <listener class-name="org.uncommons.reportng.HTMLReporter" />
-            <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
-        </listeners>      
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>      
 </suite>
 
-![](https://testerhome.com/uploads/photo/2018/8da0567e-881e-4e01-af90-3928b1456d8e.png!large)
+![](https://testerhome.com/uploads/photo/2018/50f138e2-061d-477e-abc8-9010faf50558.png!large)
 
  ---
 #### [ExtentReports](https://testerhome.com/uploads/photo/2018/128a4480-580f-43ae-af52-5087ae0102e6.png!large)
     <?xml version="1.0" encoding="UTF-8"?>
     <suite name="Suite" verbose="1" preserve-order="true" parallel="false">
         <suite-files>
-            <suite-file path="TestngReport.xml"></suite-file>
+            <suite-file path="Login.xml"></suite-file>
         </suite-files>
         <listeners>
-            <listener class-name="com.jmoney.xiyuyou.service.ExtentReportGenerateService"></listener>
+            <listener class-name="com.jmoney.luckeylink.service.ExtentReportGenerateService"></listener>
         </listeners> 
         <!-- C:\Windows\System32\drivers\etc
         151.139.237.11    cdn.rawgit.com -->
     </suite>
 
-![](https://testerhome.com/uploads/photo/2018/128a4480-580f-43ae-af52-5087ae0102e6.png!large)
+![](https://testerhome.com/uploads/photo/2018/d709087f-0a50-4a2b-b3c6-39085a02977e.png!large)
  - 第二种测种试报告，需要翻墙才能正常显示，否则页面显示乱码，因为是国外的东西
  - 或者在C:\Windows\System32\drivers\etc    host文件末尾添加151.139.237.11   cdn.rawgit.com
 
@@ -621,4 +583,5 @@
 QQ：1306086303     
 Email：hagyao520@163.com
 
-> QQ官方交流群 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=346d11a1a76d05086cd48bc8249126f514248479b50f96288189ab5ae0ca7ba5"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="126325132" title="126325132"></a>
+> QQ官方交流群 126325132
+<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=346d11a1a76d05086cd48bc8249126f514248479b50f96288189ab5ae0ca7ba5"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="软件测试开发交流群" title="软件测试开发交流群"></a>

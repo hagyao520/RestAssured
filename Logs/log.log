@@ -1,9 +1,386 @@
-2018-05-13 15:30:52.362 [INFO ] com.sales.webapi.handler.LoginApi_Handler - class com.sales.webapi.handler.LoginApi_Handler
-2018-05-13 15:30:54.816 [INFO ] com.sales.webapi.handler.LoginApi_Handler - 根据数据库查询结果, 开始写入预期值【Waiting...】
-2018-05-13 15:30:55.515 [INFO ] com.sales.webapi.util.DataBase_Util - 数据库资源释放成功！
-2018-05-13 15:30:55.515 [INFO ] com.sales.webapi.util.DataBase_Util - 数据库连接关闭成功！
-2018-05-13 15:30:58.484 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://10.10.11.132:8030
-2018-05-13 15:30:58.490 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 10.10.11.132:8030
-2018-05-13 15:31:19.487 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@15e93f04 closed
-2018-05-13 15:31:19.487 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection org.apache.http.impl.conn.DefaultClientConnection@15e93f04 shut down
-2018-05-13 15:31:19.488 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@10eba3b7
+2018-10-30 18:02:21.679 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:21.682 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - 初始化: src/test/java/TestCasexls/JMoney.Luckeylink.Api.xlsm, Login
+2018-10-30 18:02:36.804 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - src/test/java/TestCasexls/JMoney.Luckeylink.Api.xlsm, Login 初始化完成
+2018-10-30 18:02:36.812 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:38.433 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://120.79.232.23:8000
+2018-10-30 18:02:38.439 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 120.79.232.23:8000
+2018-10-30 18:02:38.465 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2018-10-30 18:02:38.466 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-10-30 18:02:38.466 [DEBUG] org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-10-30 18:02:38.466 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-10-30 18:02:38.466 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-10-30 18:02:38.466 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/user/login HTTP/1.1
+2018-10-30 18:02:38.466 [DEBUG] org.apache.http.wire -  >> "POST /api/user/login HTTP/1.1[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "Content-Length: 38[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "Host: 120.79.232.23:8000[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "[\r][\n]"
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> POST /api/user/login HTTP/1.1
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> Accept: */*
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> Content-Length: 38
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> Host: 120.79.232.23:8000
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> Connection: Keep-Alive
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2018-10-30 18:02:38.467 [DEBUG] org.apache.http.wire -  >> "username=admin&password=admin369874125"
+2018-10-30 18:02:38.588 [DEBUG] org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.wire -  << "Allow: POST, OPTIONS[\r][\n]"
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.wire -  << "Content-Length: 242[\r][\n]"
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.wire -  << "[\r][\n]"
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.headers - << HTTP/1.1 200 OK
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.headers - << Content-Type: application/json
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.headers - << Allow: POST, OPTIONS
+2018-10-30 18:02:38.589 [DEBUG] org.apache.http.headers - << X-Frame-Options: SAMEORIGIN
+2018-10-30 18:02:38.590 [DEBUG] org.apache.http.headers - << Content-Length: 242
+2018-10-30 18:02:38.591 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-10-30 18:02:38.603 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2018-10-30 18:02:38.603 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-10-30 18:02:38.618 [DEBUG] org.apache.http.wire -  << "{"code":"999999","msg":"[0xe6][0x88][0x90][0xe5][0x8a][0x9f]","data":{"first_name":"admin","last_name":"","phone":"12345678911","email":"admin@163.com","key":"640ca3dbb875b6cfe898bf0c9b0f45a921ef169b","date_joined":"2018-06-28 02:56:00","userphoto":"/file/userphoto.jpg"}}"
+2018-10-30 18:02:38.618 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@25644d1d
+2018-10-30 18:02:38.618 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-10-30 18:02:38.923 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54496<->120.79.232.23:8000 closed
+2018-10-30 18:02:41.151 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:41.784 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://120.79.232.23:8000
+2018-10-30 18:02:41.785 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 120.79.232.23:8000
+2018-10-30 18:02:41.800 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2018-10-30 18:02:41.800 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-10-30 18:02:41.800 [DEBUG] org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-10-30 18:02:41.800 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-10-30 18:02:41.800 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/user/login HTTP/1.1
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "POST /api/user/login HTTP/1.1[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "Content-Length: 19[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "Host: 120.79.232.23:8000[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "[\r][\n]"
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> POST /api/user/login HTTP/1.1
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> Accept: */*
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> Content-Length: 19
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> Host: 120.79.232.23:8000
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> Connection: Keep-Alive
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2018-10-30 18:02:41.801 [DEBUG] org.apache.http.wire -  >> "username=&password="
+2018-10-30 18:02:41.816 [DEBUG] org.apache.http.wire -  << "HTTP/1.1 400 Bad Request[\r][\n]"
+2018-10-30 18:02:41.816 [DEBUG] org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2018-10-30 18:02:41.816 [DEBUG] org.apache.http.wire -  << "Allow: POST, OPTIONS[\r][\n]"
+2018-10-30 18:02:41.816 [DEBUG] org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2018-10-30 18:02:41.816 [DEBUG] org.apache.http.wire -  << "Content-Length: 92[\r][\n]"
+2018-10-30 18:02:41.816 [DEBUG] org.apache.http.wire -  << "[\r][\n]"
+2018-10-30 18:02:41.817 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 400 Bad Request
+2018-10-30 18:02:41.817 [DEBUG] org.apache.http.headers - << HTTP/1.1 400 Bad Request
+2018-10-30 18:02:41.817 [DEBUG] org.apache.http.headers - << Content-Type: application/json
+2018-10-30 18:02:41.817 [DEBUG] org.apache.http.headers - << Allow: POST, OPTIONS
+2018-10-30 18:02:41.817 [DEBUG] org.apache.http.headers - << X-Frame-Options: SAMEORIGIN
+2018-10-30 18:02:41.817 [DEBUG] org.apache.http.headers - << Content-Length: 92
+2018-10-30 18:02:41.817 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-10-30 18:02:41.817 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2018-10-30 18:02:41.817 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-10-30 18:02:41.818 [DEBUG] org.apache.http.wire -  << "{"username":["[0xe8][0xaf][0xa5][0xe5][0xad][0x97][0xe6][0xae][0xb5][0xe4][0xb8][0x8d][0xe8][0x83][0xbd][0xe4][0xb8][0xba][0xe7][0xa9][0xba][0xe3][0x80][0x82]"],"password":["[0xe8][0xaf][0xa5][0xe5][0xad][0x97][0xe6][0xae][0xb5][0xe4][0xb8][0x8d][0xe8][0x83][0xbd][0xe4][0xb8][0xba][0xe7][0xa9][0xba][0xe3][0x80][0x82]"],"code":400}"
+2018-10-30 18:02:41.818 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@13baed2c
+2018-10-30 18:02:41.818 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-10-30 18:02:42.187 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54515<->120.79.232.23:8000 closed
+2018-10-30 18:02:42.723 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:43.322 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://120.79.232.23:8000
+2018-10-30 18:02:43.322 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 120.79.232.23:8000
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/user/login HTTP/1.1
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "POST /api/user/login HTTP/1.1[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "Content-Length: 33[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "Host: 120.79.232.23:8000[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.wire -  >> "[\r][\n]"
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.headers - >> POST /api/user/login HTTP/1.1
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.headers - >> Accept: */*
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.headers - >> Content-Length: 33
+2018-10-30 18:02:43.337 [DEBUG] org.apache.http.headers - >> Host: 120.79.232.23:8000
+2018-10-30 18:02:43.338 [DEBUG] org.apache.http.headers - >> Connection: Keep-Alive
+2018-10-30 18:02:43.338 [DEBUG] org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)
+2018-10-30 18:02:43.338 [DEBUG] org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2018-10-30 18:02:43.338 [DEBUG] org.apache.http.wire -  >> "username=&password=admin369874125"
+2018-10-30 18:02:43.350 [DEBUG] org.apache.http.wire -  << "HTTP/1.1 400 Bad Request[\r][\n]"
+2018-10-30 18:02:43.350 [DEBUG] org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2018-10-30 18:02:43.350 [DEBUG] org.apache.http.wire -  << "Allow: POST, OPTIONS[\r][\n]"
+2018-10-30 18:02:43.350 [DEBUG] org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2018-10-30 18:02:43.350 [DEBUG] org.apache.http.wire -  << "Content-Length: 52[\r][\n]"
+2018-10-30 18:02:43.350 [DEBUG] org.apache.http.wire -  << "[\r][\n]"
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 400 Bad Request
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.headers - << HTTP/1.1 400 Bad Request
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.headers - << Content-Type: application/json
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.headers - << Allow: POST, OPTIONS
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.headers - << X-Frame-Options: SAMEORIGIN
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.headers - << Content-Length: 52
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-10-30 18:02:43.351 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2018-10-30 18:02:43.351 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-10-30 18:02:43.351 [DEBUG] org.apache.http.wire -  << "{"username":["[0xe8][0xaf][0xa5][0xe5][0xad][0x97][0xe6][0xae][0xb5][0xe4][0xb8][0x8d][0xe8][0x83][0xbd][0xe4][0xb8][0xba][0xe7][0xa9][0xba][0xe3][0x80][0x82]"],"code":400}"
+2018-10-30 18:02:43.352 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@19a95a72
+2018-10-30 18:02:43.352 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-10-30 18:02:43.609 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54522<->120.79.232.23:8000 closed
+2018-10-30 18:02:44.202 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:44.770 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://120.79.232.23:8000
+2018-10-30 18:02:44.770 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 120.79.232.23:8000
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/user/login HTTP/1.1
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "POST /api/user/login HTTP/1.1[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "Content-Length: 24[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "Host: 120.79.232.23:8000[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "[\r][\n]"
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> POST /api/user/login HTTP/1.1
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> Accept: */*
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> Content-Length: 24
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> Host: 120.79.232.23:8000
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> Connection: Keep-Alive
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2018-10-30 18:02:44.786 [DEBUG] org.apache.http.wire -  >> "username=admin&password="
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.wire -  << "HTTP/1.1 400 Bad Request[\r][\n]"
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.wire -  << "Allow: POST, OPTIONS[\r][\n]"
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.wire -  << "Content-Length: 52[\r][\n]"
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.wire -  << "[\r][\n]"
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 400 Bad Request
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.headers - << HTTP/1.1 400 Bad Request
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.headers - << Content-Type: application/json
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.headers - << Allow: POST, OPTIONS
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.headers - << X-Frame-Options: SAMEORIGIN
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.headers - << Content-Length: 52
+2018-10-30 18:02:44.800 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-10-30 18:02:44.800 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2018-10-30 18:02:44.800 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-10-30 18:02:44.801 [DEBUG] org.apache.http.wire -  << "{"password":["[0xe8][0xaf][0xa5][0xe5][0xad][0x97][0xe6][0xae][0xb5][0xe4][0xb8][0x8d][0xe8][0x83][0xbd][0xe4][0xb8][0xba][0xe7][0xa9][0xba][0xe3][0x80][0x82]"],"code":400}"
+2018-10-30 18:02:44.801 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6fd86a24
+2018-10-30 18:02:44.801 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-10-30 18:02:45.202 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54529<->120.79.232.23:8000 closed
+2018-10-30 18:02:45.674 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:46.256 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://120.79.232.23:8000
+2018-10-30 18:02:46.257 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 120.79.232.23:8000
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/user/login HTTP/1.1
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "POST /api/user/login HTTP/1.1[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "Content-Length: 34[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "Host: 120.79.232.23:8000[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "[\r][\n]"
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> POST /api/user/login HTTP/1.1
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> Accept: */*
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> Content-Length: 34
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> Host: 120.79.232.23:8000
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> Connection: Keep-Alive
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2018-10-30 18:02:46.273 [DEBUG] org.apache.http.wire -  >> "username=123456&password=123456789"
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.wire -  << "Allow: POST, OPTIONS[\r][\n]"
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.wire -  << "Content-Length: 47[\r][\n]"
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.wire -  << "[\r][\n]"
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.headers - << HTTP/1.1 200 OK
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.headers - << Content-Type: application/json
+2018-10-30 18:02:46.382 [DEBUG] org.apache.http.headers - << Allow: POST, OPTIONS
+2018-10-30 18:02:46.383 [DEBUG] org.apache.http.headers - << X-Frame-Options: SAMEORIGIN
+2018-10-30 18:02:46.383 [DEBUG] org.apache.http.headers - << Content-Length: 47
+2018-10-30 18:02:46.383 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-10-30 18:02:46.383 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2018-10-30 18:02:46.383 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-10-30 18:02:46.384 [DEBUG] org.apache.http.wire -  << "{"code":"999984","msg":"[0xe8][0xb4][0xa6][0xe5][0x8f][0xb7][0xe6][0x88][0x96][0xe5][0xaf][0x86][0xe7][0xa0][0x81][0xe9][0x94][0x99][0xe8][0xaf][0xaf]"}"
+2018-10-30 18:02:46.384 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@55bd107c
+2018-10-30 18:02:46.384 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-10-30 18:02:46.722 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54540<->120.79.232.23:8000 closed
+2018-10-30 18:02:47.166 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:47.844 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://120.79.232.23:8000
+2018-10-30 18:02:47.844 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 120.79.232.23:8000
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/user/login HTTP/1.1
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.wire -  >> "POST /api/user/login HTTP/1.1[\r][\n]"
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2018-10-30 18:02:47.859 [DEBUG] org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.wire -  >> "Content-Length: 39[\r][\n]"
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.wire -  >> "Host: 120.79.232.23:8000[\r][\n]"
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)[\r][\n]"
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.wire -  >> "[\r][\n]"
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> POST /api/user/login HTTP/1.1
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> Accept: */*
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> Content-Length: 39
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> Host: 120.79.232.23:8000
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> Connection: Keep-Alive
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2018-10-30 18:02:47.860 [DEBUG] org.apache.http.wire -  >> "username=123456&password=admin369874125"
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.wire -  << "Allow: POST, OPTIONS[\r][\n]"
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.wire -  << "Content-Length: 47[\r][\n]"
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.wire -  << "[\r][\n]"
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.headers - << HTTP/1.1 200 OK
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.headers - << Content-Type: application/json
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.headers - << Allow: POST, OPTIONS
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.headers - << X-Frame-Options: SAMEORIGIN
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.headers - << Content-Length: 47
+2018-10-30 18:02:47.972 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-10-30 18:02:47.973 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2018-10-30 18:02:47.973 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-10-30 18:02:47.973 [DEBUG] org.apache.http.wire -  << "{"code":"999984","msg":"[0xe8][0xb4][0xa6][0xe5][0x8f][0xb7][0xe6][0x88][0x96][0xe5][0xaf][0x86][0xe7][0xa0][0x81][0xe9][0x94][0x99][0xe8][0xaf][0xaf]"}"
+2018-10-30 18:02:47.973 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5ca8ce17
+2018-10-30 18:02:47.973 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-10-30 18:02:48.150 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54548<->120.79.232.23:8000 closed
+2018-10-30 18:02:48.715 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:49.336 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Get connection for route {}->http://120.79.232.23:8000
+2018-10-30 18:02:49.336 [DEBUG] org.apache.http.impl.conn.DefaultClientConnectionOperator - Connecting to 120.79.232.23:8000
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.client.protocol.RequestAddCookies - CookieSpec selected: ignoreCookies
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.client.protocol.RequestAuthCache - Auth cache not set in the context
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.client.protocol.RequestTargetAuthentication - Target auth state: UNCHALLENGED
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.client.protocol.RequestProxyAuthentication - Proxy auth state: UNCHALLENGED
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Attempt 1 to execute request
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Sending request: POST /api/user/login HTTP/1.1
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.wire -  >> "POST /api/user/login HTTP/1.1[\r][\n]"
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.wire -  >> "Accept: */*[\r][\n]"
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.wire -  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.wire -  >> "Content-Length: 33[\r][\n]"
+2018-10-30 18:02:49.350 [DEBUG] org.apache.http.wire -  >> "Host: 120.79.232.23:8000[\r][\n]"
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.wire -  >> "Connection: Keep-Alive[\r][\n]"
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.wire -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)[\r][\n]"
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.wire -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.wire -  >> "[\r][\n]"
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> POST /api/user/login HTTP/1.1
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> Accept: */*
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> Content-Length: 33
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> Host: 120.79.232.23:8000
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> Connection: Keep-Alive
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_112)
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.headers - >> Accept-Encoding: gzip,deflate
+2018-10-30 18:02:49.351 [DEBUG] org.apache.http.wire -  >> "username=admin&password=123456789"
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.wire -  << "HTTP/1.1 200 OK[\r][\n]"
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.wire -  << "Content-Type: application/json[\r][\n]"
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.wire -  << "Allow: POST, OPTIONS[\r][\n]"
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.wire -  << "X-Frame-Options: SAMEORIGIN[\r][\n]"
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.wire -  << "Content-Length: 47[\r][\n]"
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.wire -  << "[\r][\n]"
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Receiving response: HTTP/1.1 200 OK
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.headers - << HTTP/1.1 200 OK
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.headers - << Content-Type: application/json
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.headers - << Allow: POST, OPTIONS
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.headers - << X-Frame-Options: SAMEORIGIN
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.headers - << Content-Length: 47
+2018-10-30 18:02:49.464 [DEBUG] org.apache.http.impl.client.DefaultHttpClient - Connection can be kept alive indefinitely
+2018-10-30 18:02:49.464 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsing response as: application/json
+2018-10-30 18:02:49.464 [DEBUG] io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+2018-10-30 18:02:49.465 [DEBUG] org.apache.http.wire -  << "{"code":"999984","msg":"[0xe8][0xb4][0xa6][0xe5][0x8f][0xb7][0xe6][0x88][0x96][0xe5][0xaf][0x86][0xe7][0xa0][0x81][0xe9][0x94][0x99][0xe8][0xaf][0xaf]"}"
+2018-10-30 18:02:49.465 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1e916eae
+2018-10-30 18:02:49.465 [DEBUG] org.apache.http.impl.conn.BasicClientConnectionManager - Connection can be kept alive indefinitely
+2018-10-30 18:02:49.536 [DEBUG] org.apache.http.impl.conn.DefaultClientConnection - Connection 0.0.0.0:54554<->120.79.232.23:8000 closed
+2018-10-30 18:02:50.214 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:50.467 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - CaseID: 1, CaseName: 使用正确的账号，正确的密码，可以正常登录成功，且接口返回的实际结果都正确, msg_Exp: 成功, msg_Act: 成功, first_name_Exp: admin, first_name_Act: admin, last_name_Exp: , last_name_Act: , phone_Exp: 12345678911, phone_Act: 12345678911, email_Exp: admin@163.com, email_Act: admin@163.com, key_Exp: 640ca3dbb875b6cfe898bf0c9b0f45a921ef169b, key_Act: 640ca3dbb875b6cfe898bf0c9b0f45a921ef169b, date_joined_Exp: 2018-06-28 02:56:00, date_joined_Act: 2018-06-28 02:56:00, userphoto_Exp: /file/userphoto.jpg, userphoto_Act: /file/userphoto.jpg, StatusCode: 999999, TestResult: OK, FailHint: 
+2018-10-30 18:02:50.467 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - ==================================================================
+2018-10-30 18:02:50.467 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:50.716 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - CaseID: 2, CaseName: 使用空值的账号，空值的密码，无法正常登录成功，且接口返回的实际结果都正确, msg_Exp: 账号和密码不能为空, msg_Act: , first_name_Exp: , first_name_Act: , last_name_Exp: , last_name_Act: , phone_Exp: , phone_Act: , email_Exp: , email_Act: , key_Exp: , key_Act: , date_joined_Exp: , date_joined_Act: , userphoto_Exp: , userphoto_Act: , StatusCode: 400, TestResult: NG, FailHint: 【msg_Exp】和【msg_Act】不一致
+2018-10-30 18:02:50.716 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - ==================================================================
+2018-10-30 18:02:50.716 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:50.976 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - CaseID: 3, CaseName: 使用空值的账号，正确的密码，无法正常登录成功，且接口返回的实际结果都正确, msg_Exp: 账号不能为空, msg_Act: , first_name_Exp: , first_name_Act: , last_name_Exp: , last_name_Act: , phone_Exp: , phone_Act: , email_Exp: , email_Act: , key_Exp: , key_Act: , date_joined_Exp: , date_joined_Act: , userphoto_Exp: , userphoto_Act: , StatusCode: 400, TestResult: NG, FailHint: 【msg_Exp】和【msg_Act】不一致
+2018-10-30 18:02:50.976 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - ==================================================================
+2018-10-30 18:02:50.976 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:51.273 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - CaseID: 4, CaseName: 使用正确的账号，空值的密码，无法正常登录成功，且接口返回的实际结果都正确, msg_Exp: 密码不能为空, msg_Act: , first_name_Exp: , first_name_Act: , last_name_Exp: , last_name_Act: , phone_Exp: , phone_Act: , email_Exp: , email_Act: , key_Exp: , key_Act: , date_joined_Exp: , date_joined_Act: , userphoto_Exp: , userphoto_Act: , StatusCode: 400, TestResult: NG, FailHint: 【msg_Exp】和【msg_Act】不一致
+2018-10-30 18:02:51.273 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - ==================================================================
+2018-10-30 18:02:51.273 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:51.553 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - CaseID: 5, CaseName: 使用错误的账号，错误的密码，无法正常登录成功，且接口返回的实际结果都正确, msg_Exp: 账号或密码错误, msg_Act: 账号或密码错误, first_name_Exp: , first_name_Act: , last_name_Exp: , last_name_Act: , phone_Exp: , phone_Act: , email_Exp: , email_Act: , key_Exp: , key_Act: , date_joined_Exp: , date_joined_Act: , userphoto_Exp: , userphoto_Act: , StatusCode: 999984, TestResult: OK, FailHint: 
+2018-10-30 18:02:51.553 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - ==================================================================
+2018-10-30 18:02:51.554 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:51.816 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - CaseID: 6, CaseName: 使用错误的账号，正确的密码，无法正常登录成功，且接口返回的实际结果都正确, msg_Exp: 账号或密码错误, msg_Act: 账号或密码错误, first_name_Exp: , first_name_Act: , last_name_Exp: , last_name_Act: , phone_Exp: , phone_Act: , email_Exp: , email_Act: , key_Exp: , key_Act: , date_joined_Exp: , date_joined_Act: , userphoto_Exp: , userphoto_Act: , StatusCode: 999984, TestResult: OK, FailHint: 
+2018-10-30 18:02:51.816 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - ==================================================================
+2018-10-30 18:02:51.816 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - class com.jmoney.luckeylink.handler.Login_Handler
+2018-10-30 18:02:52.067 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - CaseID: 7, CaseName: 使用正确的账号，错误的密码，无法正常登录成功，且接口返回的实际结果都正确, msg_Exp: 账号或密码错误, msg_Act: 账号或密码错误, first_name_Exp: , first_name_Act: , last_name_Exp: , last_name_Act: , phone_Exp: , phone_Act: , email_Exp: , email_Act: , key_Exp: , key_Act: , date_joined_Exp: , date_joined_Act: , userphoto_Exp: , userphoto_Act: , StatusCode: 999984, TestResult: OK, FailHint: 
+2018-10-30 18:02:52.068 [INFO ] com.jmoney.luckeylink.handler.Login_Handler - ==================================================================
+2018-10-30 18:02:52.288 [DEBUG] freemarker.cache - Couldn't find template in cache for "index.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.289 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("index_en.ftl"): Not found
+2018-10-30 18:02:52.290 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("index.ftl"): Found
+2018-10-30 18:02:52.291 [DEBUG] freemarker.cache - Loading template for "index.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/index.ftl"
+2018-10-30 18:02:52.376 [DEBUG] freemarker.cache - Couldn't find template in cache for "head.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.376 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("head_en.ftl"): Not found
+2018-10-30 18:02:52.376 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("head.ftl"): Found
+2018-10-30 18:02:52.376 [DEBUG] freemarker.cache - Loading template for "head.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/head.ftl"
+2018-10-30 18:02:52.454 [DEBUG] freemarker.cache - Couldn't find template in cache for "nav.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.455 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("nav_en.ftl"): Not found
+2018-10-30 18:02:52.455 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("nav.ftl"): Found
+2018-10-30 18:02:52.455 [DEBUG] freemarker.cache - Loading template for "nav.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/nav.ftl"
+2018-10-30 18:02:52.460 [DEBUG] freemarker.cache - Couldn't find template in cache for "test-view/test-view.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.460 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("test-view/test-view_en.ftl"): Not found
+2018-10-30 18:02:52.460 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("test-view/test-view.ftl"): Found
+2018-10-30 18:02:52.460 [DEBUG] freemarker.cache - Loading template for "test-view/test-view.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view.ftl"
+2018-10-30 18:02:52.470 [DEBUG] freemarker.cache - Couldn't find template in cache for "test-view/test-view-charts.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.470 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("test-view/test-view-charts_en.ftl"): Not found
+2018-10-30 18:02:52.470 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("test-view/test-view-charts.ftl"): Found
+2018-10-30 18:02:52.470 [DEBUG] freemarker.cache - Loading template for "test-view/test-view-charts.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/test-view/test-view-charts.ftl"
+2018-10-30 18:02:52.475 [DEBUG] freemarker.cache - Couldn't find template in cache for "test-view/standard.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.475 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("test-view/standard_en.ftl"): Not found
+2018-10-30 18:02:52.475 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("test-view/standard.ftl"): Found
+2018-10-30 18:02:52.475 [DEBUG] freemarker.cache - Loading template for "test-view/standard.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/test-view/standard.ftl"
+2018-10-30 18:02:52.492 [DEBUG] freemarker.cache - Couldn't find template in cache for "category-view/category-view.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.492 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("category-view/category-view_en.ftl"): Not found
+2018-10-30 18:02:52.493 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("category-view/category-view.ftl"): Found
+2018-10-30 18:02:52.493 [DEBUG] freemarker.cache - Loading template for "category-view/category-view.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/category-view/category-view.ftl"
+2018-10-30 18:02:52.496 [DEBUG] freemarker.cache - Couldn't find template in cache for "exception-view/exception-view.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.497 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("exception-view/exception-view_en.ftl"): Not found
+2018-10-30 18:02:52.497 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("exception-view/exception-view.ftl"): Found
+2018-10-30 18:02:52.497 [DEBUG] freemarker.cache - Loading template for "exception-view/exception-view.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/exception-view/exception-view.ftl"
+2018-10-30 18:02:52.499 [DEBUG] freemarker.cache - Couldn't find template in cache for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.500 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view_en.ftl"): Not found
+2018-10-30 18:02:52.500 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("dashboard-view/dashboard-view.ftl"): Found
+2018-10-30 18:02:52.500 [DEBUG] freemarker.cache - Loading template for "dashboard-view/dashboard-view.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/dashboard-view/dashboard-view.ftl"
+2018-10-30 18:02:52.503 [DEBUG] freemarker.cache - Couldn't find template in cache for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed); will try to load it.
+2018-10-30 18:02:52.503 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view_en.ftl"): Not found
+2018-10-30 18:02:52.503 [DEBUG] freemarker.cache - TemplateLoader.findTemplateSource("logs-view/testrunner-logs-view.ftl"): Found
+2018-10-30 18:02:52.503 [DEBUG] freemarker.cache - Loading template for "logs-view/testrunner-logs-view.ftl"("en", UTF-8, parsed) from "jar:file:/D:/King/EclipseFX/RestAssured/target/lib/extentreports-3.0.3.jar!/com/aventstack/extentreports/view/html-report/logs-view/testrunner-logs-view.ftl"

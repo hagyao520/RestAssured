@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" name="Failed suite [Web后端-接口自动化测试]">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="com.jmoney.luckeylink.service.ExtentReportGenerateService"/>
+  </listeners>
+  <test thread-count="5" verbose="3" name="用户登录接口" time-out="6000000">
+    <classes>
+      <class name="TestCases.Login">
+        <methods>
+          <include name="case1"/>
+          <include name="case2"/>
+          <include name="case3"/>
+          <include name="case4"/>
+          <include name="case5"/>
+          <include name="case6"/>
+          <include name="case7"/>
+          <exclude name=""/>
+        </methods>
+      </class> <!-- TestCases.Login -->
+    </classes>
+  </test> <!-- 用户登录接口 -->
+  <test name="用户登录接口(failed)">
+    <classes>
+      <class name="TestCases.Login">
+        <methods>
+          <include name="TearDown"/>
+          <include name="Case3"/>
+          <include name="Stup"/>
+          <include name="Case4"/>
+          <include name="Case2"/>
+        </methods>
+      </class> <!-- TestCases.Login -->
+    </classes>
+  </test> <!-- 用户登录接口(failed) -->
+</suite> <!-- Failed suite [Web后端-接口自动化测试] -->

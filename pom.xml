@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <groupId>GiveU.Sales.WebApi.Test</groupId>
-  <artifactId>GiveU.Sales.WebApi.Test</artifactId>
+  <groupId>Com.JMoney</groupId>
+  <artifactId>JMoney.Luckeylink.Api.Test</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   
-  <name>GiveU.Sales.WebApi.Test</name>
+  <name>JMoney.Luckeylink.Api.Test</name>
   <url>http://maven.apache.org</url>
   
   <dependencies>
@@ -85,11 +85,17 @@
         
         <!-- DataBase-MySql -->
         <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>5.1.44</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.44</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.54</version>
+        </dependency>
+    
         <!-- Log4j  -->
         <dependency>
             <groupId>log4j</groupId>
@@ -200,6 +206,14 @@
             </resource>
         </resources>
 		<plugins>
+            <plugin>  
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-surefire-plugin</artifactId>  
+                <version>2.18.1</version>  
+                <configuration>  
+                    <skipTests>true</skipTests>  
+                </configuration>  
+            </plugin> 
 		    <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -208,7 +222,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-                
             </plugin>
 		    <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -243,20 +256,5 @@
             </configuration>
             </plugin>	
 		</plugins>
-	</build>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+	</build> 
 </project>
